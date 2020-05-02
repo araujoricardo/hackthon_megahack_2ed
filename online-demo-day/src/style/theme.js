@@ -6,6 +6,6 @@ export default createMuiTheme({
     primary: {
       main: "#28a4ef",
       light: orange
-    }
+    },
   }
 });

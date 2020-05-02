@@ -22,14 +22,14 @@ class HomePage extends React.Component{
                 </LogoWrapper>
 
                 <TopBottonWrapper>
-                    <ButtonTop color="primary" Click={goToLoginPage}>LOGIN</ButtonTop>
+                    <ButtonTop color="primary" onClick={goToLoginPage}>LOGIN</ButtonTop>
                     <ButtonTop color="primary">SOBRE NÓS</ButtonTop>
                     <ButtonTop color="primary">PLANOS</ButtonTop>
                     <ButtonTop color="primary">CONTATO</ButtonTop>
                 </TopBottonWrapper>
 
                 <ContentWrapper>
-                    <ContentText>Juntos fazemos acontecer!</ContentText>
+                    <ContentText variant="p">Juntos fazemos acontecer!</ContentText>
                 </ContentWrapper>
 
                 <SignUpWrapper>
@@ -43,7 +43,7 @@ class HomePage extends React.Component{
 const mapDispatchToProps = dispatch =>{
     return{
         goToLoginPage: () => dispatch(push(routes.login)),
-        goToSignUpPage: () =>dispatch(push(routes.signuppage))
+        goToSignUpPage: () => dispatch(push(routes.signuppage))
     }
 }
 
