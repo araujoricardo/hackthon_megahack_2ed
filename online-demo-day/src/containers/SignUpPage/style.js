@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import Paper from '@material-ui/core/Paper'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 
-export const LoginPageWrapper = styled.div`
+export const SignUpPageWrapper = styled.div`
     position: absolute;
     width: 100%;
     height: 100%;
@@ -19,7 +19,7 @@ export const PaperWrapper = styled(Paper)`
     height: 50%;
 `
 
-export const LoginWrapper = styled.form`
+export const SignUpWrapper = styled.form`
     margin: auto;
     text-align: center;
     gap: 10px;
