@@ -12,7 +12,6 @@ export const FeedPageWrapper = styled.div`
 export const ProfileSideBar = styled.div`
     grid-row:2;
     grid-column:1;
-    background: green;
 `
 
 export const ContentWrapper = styled.div`
