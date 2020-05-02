@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography'
 
 
 export const HomePageWrapper = styled.div`
@@ -9,7 +10,7 @@ export const HomePageWrapper = styled.div`
     display: grid;
     grid-template-rows: 12% 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
-
+    font-family: Roboto;
 `
 
 export const LogoWrapper = styled.div`
@@ -33,11 +34,16 @@ export const TopBottonWrapper = styled.div`
 
 export const ButtonTop = styled(Button)`
 &&{
+    border-radius: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
     color: white;
-    height: 35px;
-    
+
     :hover{
-        color: #28a4ea;
+        color: #12A2F4;
         background-color: white;
     };
 }
@@ -47,11 +53,19 @@ export const ContentWrapper = styled.div`
     grid-row: 4;
     grid-column:2;
     text-align:right;
-    margin: 60px;
+    margin-right: 100px;
 `
 
-export const ContentText = styled.p`
-    color: white;
+export const ContentText = styled(Typography)`
+&&{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 55px;
+    color: #FFFFFF;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.53);
+}
+    
 `
 
 export const SignUpWrapper = styled.div`
@@ -62,12 +76,19 @@ export const SignUpWrapper = styled.div`
 
 export const SignUpButton = styled(Button)`
 &&{
-    color: white;
-    background-color: #28a4ea;
-    padding: 10px 20px;
-    
+    background-color: #12A2F4;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.46);
+    border-radius: 10px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 37px;
+    color: #E5E5E5;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.35);
+
     :hover{
-        background-color: #28a4ea;
+        background-color: #466585;
     }
 }
 `
