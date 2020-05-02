@@ -9,6 +9,18 @@ export const FeedPageWrapper = styled.div`
     grid-template-columns: 20% 1fr 30%;
 `
 
+export const LogoWrapper = styled.div`
+    display:flex;
+    align-items:center;
+    margin-left: 60px;
+    grid-column: 1;
+`
+
+export const Logo = styled.img`
+    height: 30px;
+    cursor: pointer;
+`
+
 export const ProfileSideBar = styled.div`
     grid-row:2;
     grid-column:1;
@@ -23,5 +35,4 @@ export const ContentWrapper = styled.div`
 export const RankingWrapper = styled.div`
     grid-row:2;
     grid-column:3;
-    background-color: blue;
 `

@@ -11,7 +11,7 @@ import logoImg from "../../images/logo.png"
 class LoginPage extends Component {
 
   render() {
-    const { goToSignUpPage, goToHomePage, goToBackPage } = this.props;
+    const { goToSignUpPage, goToHomePage, goToBackPage, goToFeedPage } = this.props;
 
     return (
       <LoginPageWrapper>
@@ -33,7 +33,7 @@ class LoginPage extends Component {
               type="password"
               label="Password"
             />
-            <Button>Login</Button>
+            <Button onClick={goToFeedPage}>Login</Button>
             <Button onClick={goToSignUpPage}>CADASTRE-SE</Button>
           </LoginWrapper>
         </PaperWrapper>
@@ -47,7 +47,8 @@ const mapDispatchToProps = (dispatch) =>{
   return{
     goToSignUpPage: () => dispatch(push(routes.signuppage)),
     goToHomePage: () => dispatch(push(routes.root)),
-    goToBackPage: () => dispatch(goBack())
+    goToBackPage: () => dispatch(goBack()),
+    goToFeedPage: () => dispatch(push(routes.feedpage))
   }
 }
 
