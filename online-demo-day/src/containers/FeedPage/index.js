@@ -1,5 +1,7 @@
 import React from "react";
-import CardFeed from "../../components/CardFeed"
+import CardFeed from "../../components/CardFeed";
+import { FeedPageWrapper, ProfileSideBar, ContentWrapper, RankingWrapper  } from "./style";
+import CardProfileSideBar from "../../components/CardProfileSideBar"
 
 class FeedPage extends React.Component{
 
@@ -7,10 +9,24 @@ class FeedPage extends React.Component{
 
     render(){
         return(
-            <div>
-                FEEDPAGE
-                <CardFeed/>
-            </div>
+            <FeedPageWrapper>
+
+
+
+                <ProfileSideBar>
+                    <CardProfileSideBar/>
+                </ProfileSideBar>
+
+
+                <ContentWrapper>
+                    <CardFeed/>
+                </ContentWrapper>
+
+
+                <RankingWrapper>
+                    CARDS RANKING
+                </RankingWrapper>
+            </FeedPageWrapper>
         )
     }
 

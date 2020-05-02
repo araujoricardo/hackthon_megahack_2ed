@@ -65,3 +65,52 @@ const mapDispatchToProps = (dispatch) =>{
 }
 
 export default connect(null, mapDispatchToProps)(LoginPage);
+
+
+// perfilEmpreendedor={
+//     //cadastro
+//     informacoesCadastrais={
+//       nome: "",
+//       email: "",
+//       empresa: "",
+//       id: ""
+//     },
+
+//     //feed
+//     conteudoFeed={
+//       titulo: "",
+//       objetivo: "",
+//       video: "",
+//       votos: "",
+//       autor: ""
+//     },
+
+//     //conteudo do perfil
+//     perfil={
+//       equipe={
+//         membros=["lorenzo", "profissão"]
+//       },
+//       produto={
+
+//       },
+//       proposta={
+
+//       },
+//       problema={
+        
+//       }
+//     }
+
+// }
+
+// feed={
+//   [
+//     {"id", "title", "logo", "problematica", "proposta", "video", "numero de votos", "usuario atual já votou"},
+//     {"id", "title", "logo", "problematica", "proposta", "video", "numero de votos", "usuario atual já votou"},
+//     {"id", "title", "logo", "problematica", "proposta", "video", "numero de votos", "usuario atual já votou"},
+//     {"id", "title", "logo", "problematica", "proposta", "video", "numero de votos", "usuario atual já votou"},
+//     {"id", "title", "logo", "problematica", "proposta", "video", "numero de votos", "usuario atual já votou"},
+//     {"id", "title", "logo", "problematica", "proposta", "video", "numero de votos", "usuario atual já votou"},
+
+//   ]
+// }
