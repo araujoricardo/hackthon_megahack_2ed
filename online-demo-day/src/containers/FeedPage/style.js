@@ -7,7 +7,7 @@ export const FeedPageWrapper = styled.div`
     display:grid;
     grid-template-rows: 12% 1fr;
     grid-template-columns: 20% 1fr 30%;
-`
+` 
 
 export const LogoWrapper = styled.div`
     display:flex;
