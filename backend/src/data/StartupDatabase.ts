@@ -15,7 +15,7 @@ export class StartupDatabase extends BaseDatabase implements StartupGateway {
       input.verifiedStatus,
       input.picture,
       input.location,
-      input.tags, 
+      input.tags,
       input.summarizedProblem,
       input.summarizedProposal,
       input.video,
@@ -75,5 +75,24 @@ export class StartupDatabase extends BaseDatabase implements StartupGateway {
     `)
 
     return result[0][0] && this.mapDBDataToStartup(result[0][0])
+  }
+
+  public async getFeed(id: string): Promise<Startup[]> {
+    const result = await this.connection.raw(`
+      SELECT id, name, picture, location, tags, summarizedProblem, summarizedProposal, video, initialInvestment
+      FROM ${this.startupTableName};
+    `)
+
+    return result[0]
+  }
+
+  public async GetStartupDetails(investorId: string, startupId: string): Promise<Startup | undefined> {
+    const result = await this.connection.raw(`
+      SELECT id, name, email, picture, location, tags, video, initialInvestment, tagline, website, team, detailedProblem, detailedProposal, products, status
+      FROM ${this.startupTableName}
+      WHERE id ='${startupId}';
+    `)
+
+    return result[0][0]
   }
 }
