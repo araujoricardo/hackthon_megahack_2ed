@@ -17,7 +17,7 @@ export default function CardFeed(props){
                 <Thumbnail src={props.thumbnail}/>
             </VideoWrapper>
             <TagWrapper>
-                <Typography color="textSecondary"><i>Tecnologia Web{props.tags}</i></Typography>
+                <Typography color="textSecondary"><i>{props.tags}</i></Typography>
             </TagWrapper>
             <VoteWrapper>
                 <p>{props.votes}</p>

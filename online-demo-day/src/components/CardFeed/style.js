@@ -30,6 +30,7 @@ export const TitleWrapper = styled.div`
     grid-row:1;
     display:flex;
     align-items:flex-end;
+    margin-left: 5px;
 `
 
 
@@ -48,6 +49,7 @@ export const DescriptionWrapper = styled.div`
     grid-row: 2;
     margin-right: 20px;
     text-align: justify;
+    margin-left: 5px;
 `
 
 export const TagWrapper = styled.div`
@@ -82,6 +84,7 @@ export const Logo = styled.img`
 
 export const Thumbnail = styled.img`
     height: 120px;
+    margin-left: 5px;
 `
 
 export const LikeButton = styled(FavoriteIcon)`
