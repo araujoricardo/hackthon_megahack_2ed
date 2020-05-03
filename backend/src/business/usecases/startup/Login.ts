@@ -1,6 +1,6 @@
-import { CompanyGateway } from "../../gateways/companyGateway";
-import { BcryptGateway } from "../../gateways/bcryptGateway";
-import { JWTAuthGateway } from "../../gateways/jwtAuthGateway";
+import { CompanyGateway } from "../../gateways/StartupGateway";
+import { BcryptGateway } from "../../gateways/BcryptGateway";
+import { JWTAuthGateway } from "../../gateways/JwtAuthGateway";
 // import { NotFoundError } from "../../errors/notFoundError";
 // import { UnauthorizedError } from "../../errors/unauthorizedError";
 

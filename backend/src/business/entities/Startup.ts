@@ -1,4 +1,4 @@
-export class Company {
+export class Startup {
   constructor(
     private id: string,
     private name: string,
@@ -7,12 +7,11 @@ export class Company {
     private verifiedStatus: boolean,
     private picture?: string,
     private location?: string,
-    private tags?: string[], // Fazer um ENUM?
+    private tags?: string[],
     private summarizedProblem?: string,
     private summarizedProposal?: string,
     private video?: string,
     private initialInvestment?: number,
-
     private tagline?: string,
     private website?: string,
     private team?: string[],
@@ -20,7 +19,7 @@ export class Company {
     private detailedProposal?: string,
     private products?: string,
     private status?: string
-  ) { }
+  ) {}
 
   public getId(): string {
     return this.id
