@@ -1,12 +1,24 @@
 import styled from "styled-components";
 
 
-export const ProfilePageWrapper = styled.div`
+export const LivePageWrapper = styled.div`
     height:100%;
     width:100%;
     display:grid;
     grid-template-rows: 12% 1fr;
-    grid-template-columns: 20% 1fr 30%;
+    grid-template-columns: 10% 1fr 30%;
+`
+
+export const LogoWrapper = styled.div`
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    grid-column: 1;
+`
+
+export const Logo = styled.img`
+    height: 30px;
+    cursor: pointer;
 `
 
 export const ProfileSideBar = styled.div`
@@ -15,7 +27,7 @@ export const ProfileSideBar = styled.div`
 `
 
 export const ContentWrapper = styled.div`
-    grid-row:2;
+    grid-row:1/3;
     grid-column:2;
     background-color: white;
     height:100%;
@@ -23,24 +35,10 @@ export const ContentWrapper = styled.div`
     overflow-y:scroll;
     display:grid;
     justify-content: center;
-    border-radius: 25px 25px 0 0;
+    border-radius: 25px;
 `
 
-export const PropertyWrapper = styled.div`
+export const ChatWrapper = styled.div`
     grid-row:2;
     grid-column:3;
-    display:grid;
-    justify-items: center;
-`
-
-export const LogoWrapper = styled.div`
-    display:flex;
-    align-items:center;
-    margin-left: 60px;
-    grid-column: 1;
-`
-
-export const Logo = styled.img`
-    height: 30px;
-    cursor: pointer;
 `

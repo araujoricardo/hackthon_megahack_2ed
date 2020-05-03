@@ -1,7 +1,9 @@
 import React from 'react';
-import {ProfilePageWrapper, ProfileSideBar, ContentWrapper, PropertyWrapper} from "./style";
+import {ProfilePageWrapper, ProfileSideBar, ContentWrapper, PropertyWrapper, LogoWrapper, Logo} from "./style";
 import CardProfileSideBar from "../../components/CardProfileSideBar"
 import CardEntrepreneurProperty from "../../components/CardEntrepreneurProperty"
+import logoImg from "../../images/logo.png"
+
 
 class ProfileEntrepreneurPage extends React.Component{
 
@@ -10,7 +12,11 @@ class ProfileEntrepreneurPage extends React.Component{
 render(){
     return(
         <ProfilePageWrapper>
-            PERFIL DO EMPREENDEDOR
+
+            <LogoWrapper>
+                <Logo src={logoImg}/>
+            </LogoWrapper>
+            
             <ProfileSideBar>
                 <CardProfileSideBar/>
             </ProfileSideBar>
