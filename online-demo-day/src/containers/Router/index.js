@@ -7,6 +7,7 @@ import ProfileEntrepreneurPage from "../ProfileEntrepreneurPage";
 import FeedPage from "../FeedPage";
 import LiveStreamPage from "../LiveStreamPage";
 import HomePage from "../HomePage";
+import AboutPage from "../AboutPage";
 
 
 export const routes = {
@@ -16,6 +17,7 @@ export const routes = {
   feedpage: "/feed",
   profileentrepreneurpage: "/profile-entrepreneur",
   livestream: "/livestream",
+  about: "/about"
 };
 
 function Router(props) {
@@ -28,6 +30,7 @@ function Router(props) {
         <Route exact path={routes.profileentrepreneurpage} component={ProfileEntrepreneurPage} />
         <Route exact path={routes.feedpage} component={FeedPage} />
         <Route exact path={routes.livestream} component={LiveStreamPage} />
+        <Route exact path={routes.about} component={AboutPage} />
       
       </Switch>
     </ConnectedRouter>
