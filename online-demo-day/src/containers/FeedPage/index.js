@@ -13,7 +13,7 @@ class FeedPage extends React.Component{
    
 
     render(){
-        const {goToFeedPage} = this.props;
+        const {goToFeedPage, goToEventPage, goToProfileEntrepreneurPage} = this.props;
 
         return(
             <FeedPageWrapper>
@@ -22,7 +22,10 @@ class FeedPage extends React.Component{
                 </LogoWrapper>
 
                 <ProfileSideBar>
-                    <CardProfileSideBar/>
+                    <CardProfileSideBar
+                        events={goToEventPage}
+                        profile={goToProfileEntrepreneurPage}/>
+                        
                 </ProfileSideBar>
 
 
@@ -49,7 +52,9 @@ class FeedPage extends React.Component{
 
 const mapDispatchToProps = dispatch =>{
     return{
-        goToFeedPage: () => dispatch(push(routes.feed))
+        goToFeedPage: () => dispatch(push(routes.feedpage)),
+        goToEventPage: () => dispatch(push(routes.livestream)),
+        goToProfileEntrepreneurPage: () => dispatch(push(routes.profileentrepreneurpage))
     }
 }
 

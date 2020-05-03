@@ -23,27 +23,27 @@ class CardProfileSideBar extends React.Component{
                     <TextName>Bill Gates</TextName>
                 </PictureWrapper>
                 <LinksWrapper>
-                    <ButtonWrapper>
+                    <ButtonWrapper onClick={this.props.notification}>
                         <NotificationIcon/>
                         <TextButton variant="button">Notificações</TextButton>
                     </ButtonWrapper>
 
-                    <ButtonWrapper>
+                    <ButtonWrapper onClick={this.props.messages}>
                         <MensageIcon/>
                         <TextButton variant="button">Mensagens</TextButton>
                     </ButtonWrapper>
 
-                    <ButtonWrapper>
+                    <ButtonWrapper onClick={this.props.favorite}>
                         <LikeIcon/>
                         <TextButton variant="button">Favoritos</TextButton>
                     </ButtonWrapper>
 
-                    <ButtonWrapper>
+                    <ButtonWrapper onClick={this.props.events}>
                         <EventIcon/>
                         <TextButton variant="button">Eventos</TextButton>
                     </ButtonWrapper>
 
-                    <ButtonWrapper>
+                    <ButtonWrapper onClick={this.props.profile}>
                         <AccountIcon/>
                         <TextButton variant="button">Perfil</TextButton>
                     </ButtonWrapper>
