@@ -1,4 +1,4 @@
-export class Company {
+export class Startup {
   constructor(
     private id: string,
     private name: string,
@@ -7,12 +7,11 @@ export class Company {
     private verifiedStatus: boolean,
     private picture?: string,
     private location?: string,
-    private tags?: string[], // Fazer um ENUM?
+    private tags?: string[],
     private summarizedProblem?: string,
     private summarizedProposal?: string,
     private video?: string,
     private initialInvestment?: number,
-
     private tagline?: string,
     private website?: string,
     private team?: string[],
@@ -20,7 +19,7 @@ export class Company {
     private detailedProposal?: string,
     private products?: string,
     private status?: string
-  ) { }
+  ) {}
 
   public getId(): string {
     return this.id
@@ -173,5 +172,47 @@ export class Company {
 
   public setStatus(status: string): void {
     this.status = status
+  }
+}
+
+
+export class StartupResume {
+  constructor(
+    private id: string,
+    private name: string,
+    private tags: string,
+    private votes: string
+  ) {}
+
+  public getId(): string {
+    return this.id
+  }
+
+  public setId(id: string): void {
+    this.id = id
+  }
+
+  public getName(): string {
+    return this.name
+  }
+
+  public setName(name: string): void {
+    this.name = name
+  }
+
+  public getTags(): string {
+    return this.tags
+  }
+
+  public setTags(tags: string): void {
+    this.tags = tags
+  }
+
+  public getVotes(): string {
+    return this.votes
+  }
+
+  public setVotes(votes: string): void {
+    this.votes = votes
   }
 }
