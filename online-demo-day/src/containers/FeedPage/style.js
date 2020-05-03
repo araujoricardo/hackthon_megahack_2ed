@@ -12,12 +12,12 @@ export const FeedPageWrapper = styled.div`
 export const LogoWrapper = styled.div`
     display:flex;
     align-items:center;
-    margin-left: 60px;
+    justify-content: center;
     grid-column: 1;
 `
 
 export const Logo = styled.img`
-    height: 30px;
+    height: 80%
     cursor: pointer;
 `
 

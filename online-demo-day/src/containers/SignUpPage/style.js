@@ -21,7 +21,7 @@ export const LogoWrapper = styled.div`
 `
 
 export const Logo = styled.img`
-    height: 30px;
+    height: 80%;
     cursor: pointer;
 `
 
@@ -92,10 +92,6 @@ export const BotaoConfirm = styled(Button)`
     font-weight: 500;
     font-size: 30px;
     color: #E5E5E5;
-
-    :hover{
-        background-color: #466585;
-    }
 }  
 `
 

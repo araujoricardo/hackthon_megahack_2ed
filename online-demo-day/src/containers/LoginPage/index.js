@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { routes } from "../Router";
 import { push, goBack } from "connected-react-router";
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
-import { PaperWrapper, LoginWrapper, LoginPageWrapper, LogoWrapper, Logo, GoBackIcon } from './style'
-import logoImg from "../../images/logo.png"
 import { login } from "../../actions/investor/login";
+import {PaperWrapper, LoginWrapper, LoginPageWrapper, LogoWrapper, Logo, GoBackIcon, PaperLogin,
+        LoginInput, PasswordInput, ButtonLogin, CheckboxWrapper, LoginH1} from './style'
+import logoImg from "../../images/logo.png"
+import Checkbox from '@material-ui/core/Checkbox';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 
 class LoginPage extends Component {
@@ -40,26 +41,37 @@ class LoginPage extends Component {
         </LogoWrapper>
 
         <PaperWrapper>
-          <GoBackIcon onClick={goToBackPage} />
-          <LoginWrapper>
-            <TextField
-              name="email"
-              type="email"
-              label="E-mail"
-              value={email}
-              onChange={this.handleInputChange}
-              
-            />
-            <TextField
-              name="password"
-              type="password"
-              label="Password"
-              value={password}
-              onChange={this.handleInputChange}
-            />
-            <Button onClick={this.handleLogin}>Login</Button>
-            <Button onClick={goToSignUpPage}>CADASTRE-SE</Button>
-          </LoginWrapper>
+            <PaperLogin>
+              <GoBackIcon onClick={goToBackPage} />
+              <LoginH1>ENTRAR</LoginH1>
+              <LoginWrapper>
+                <LoginInput
+                  name="email"
+                  type="email"
+                  label="E-mail"
+                  variant="filled"
+                  value={email}
+                  onChange={this.handleInputChange}
+                />
+                <PasswordInput
+                  name="password"
+                  type="password"
+                  label="Password"
+                  variant="filled"
+                  value={password}
+                  onChange={this.handleInputChange}
+                />
+
+                  <CheckboxWrapper>
+                    <FormControlLabel
+                      control={<Checkbox color="primary" />}
+                      label="Salvar email & senha"
+                    />
+                    </CheckboxWrapper>
+                
+                <ButtonLogin variant="contained" color="primary" onClick={this.handleLogin}>Login</ButtonLogin>
+              </LoginWrapper>
+          </PaperLogin>
         </PaperWrapper>
       </LoginPageWrapper>
 

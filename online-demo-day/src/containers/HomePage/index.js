@@ -30,7 +30,7 @@ class HomePage extends React.Component{
                 </ContentWrapper>
 
                 <SignUpWrapper>
-                    <SignUpButton onClick={goToSignUpPage}>CADASTRE-SE</SignUpButton>
+                    <SignUpButton variant="contained" color="primary" onClick={goToSignUpPage}>CADASTRE-SE</SignUpButton>
                 </SignUpWrapper>
             </HomePageWrapper>
         )
