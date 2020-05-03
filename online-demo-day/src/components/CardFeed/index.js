@@ -25,7 +25,7 @@ export default function CardFeed(props){
                 <ShareButton/>
             </VoteWrapper>
             <InfoBotton>
-                <Button variant="contained" color="primary">SAIBA MAIS</Button>
+                <Button variant="contained" color="primary" onClick={props.knowmore}>SAIBA MAIS</Button>
             </InfoBotton>
         </CardFeedWrapper>
     )

@@ -4,10 +4,11 @@ import  {routes} from "../Router";
 import { push } from "connected-react-router";
 import CardProfileSideBar from "../../components/CardProfileSideBar"
 import {LivePageWrapper, LogoWrapper, Logo, ChatWrapper,
-        ProfileSideBar, ContentWrapper} from "./styled"
+        ProfileSideBar, ContentWrapper, SearchWrapper, TitleChatWrapper, TitleChat, InputSearch, ButtonSearchWrapper} from "./styled"
 import logoImg from "../../images/logo.png"
 import CardLiveStream from '../../components/CardLivestream'
 import ChatLive from '../../components/ChatLive'
+import SearchIcon from '@material-ui/icons/Search';
 
 
 class LiveStreamPage extends React.Component{
@@ -24,13 +25,21 @@ class LiveStreamPage extends React.Component{
 
                 <ProfileSideBar>
                     <CardProfileSideBar
-                    events={goToEventPage}
-                    profile={goToProfileEntrepreneurPage}/>
+                    events={goToEventPage}/>
                 </ProfileSideBar>
+
+                <SearchWrapper>
+                    <InputSearch label="Pesquisar..."></InputSearch>
+                    <ButtonSearchWrapper><SearchIcon></SearchIcon></ButtonSearchWrapper>
+                </SearchWrapper>
 
                 <ContentWrapper>
                     <CardLiveStream />
                 </ContentWrapper>
+
+                <TitleChatWrapper>
+                    <TitleChat>CHAT</TitleChat>
+                </TitleChatWrapper>
 
                 <ChatWrapper>
                     <ChatLive></ChatLive>
