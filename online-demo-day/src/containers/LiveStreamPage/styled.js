@@ -6,7 +6,7 @@ export const LivePageWrapper = styled.div`
     width:100%;
     display:grid;
     grid-template-rows: 12% 1fr;
-    grid-template-columns: 10% 1fr 30%;
+    grid-template-columns: 20% 1fr 30%;
 `
 
 export const LogoWrapper = styled.div`
@@ -27,7 +27,7 @@ export const ProfileSideBar = styled.div`
 `
 
 export const ContentWrapper = styled.div`
-    grid-row:1/3;
+    grid-row:2;
     grid-column:2;
     background-color: white;
     height:100%;
