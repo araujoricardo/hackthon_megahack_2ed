@@ -29,7 +29,6 @@ export const PaperLogin = styled(Paper)`
 `
 
 export const LoginWrapper = styled.form`
-    margin: auto;
     text-align: center;
     gap: 10px;
     place-content: center;
@@ -38,11 +37,11 @@ export const LoginWrapper = styled.form`
 `;
 
 export const LoginInput = styled(TextField)`
-
+    width: 300px;
 `
 
 export const PasswordInput = styled(TextField)`
-
+    width: 300px;
 `
 
 export const ButtonLogin = styled(Button)`
@@ -59,6 +58,10 @@ export const ButtonLogin = styled(Button)`
 export const CheckboxWrapper = styled.div`
     display: flex;
     justify-content: center;
+`
+
+export const LoginH1 = styled.h1`
+    text-align: center;
 `
 
 export const LogoWrapper = styled.div`
