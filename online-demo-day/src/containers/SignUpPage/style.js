@@ -9,15 +9,8 @@ export const SignUpPageWrapper = styled.div`
     height: 100%;
     display: grid;
     grid-template-rows: 12% 100px 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     font-family: Roboto;
-`
-
-export const PaperWrapper = styled.div`
-    grid-column: 3;
-    grid-row: 3;
-    margin-bottom: 50px;
-    margin-right: 50px;
 `
 
 export const LogoWrapper = styled.div`
@@ -27,10 +20,31 @@ export const LogoWrapper = styled.div`
     grid-column: 1;
 `
 
+export const Logo = styled.img`
+    height: 30px;
+    cursor: pointer;
+`
+
+
+export const PaperWrapper = styled.div`
+    grid-column: 2;
+    grid-row: 2/4;
+    height: 100%;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+` 
+
 export const BotaoWrapper = styled.div`
     grid-column: 1/3;
     display: flex;
     justify-content: center;
+`
+
+export const PaperSignUp = styled(Paper)`
+    padding: 20px;
+    width:400px;
 `
 
 export const SignUpWrapper = styled.form`
@@ -48,9 +62,7 @@ export const CheckboxWrapper = styled.div`
     grid-column: 1/3;
 `
 
-export const PaperSignUp = styled(Paper)`
-    padding: 20px;
-`
+
 
 export const SignUpH1 = styled.h1`
     text-align: center;
@@ -80,11 +92,6 @@ export const BotaoConfirm = styled(Button)`
         background-color: #466585;
     }
 }  
-`
-
-export const Logo = styled.img`
-    height: 30px;
-    cursor: pointer;
 `
 
 export const GoBackIcon = styled(ArrowBackIcon)`
