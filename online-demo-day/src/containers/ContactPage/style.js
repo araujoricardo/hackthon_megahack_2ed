@@ -20,7 +20,7 @@ export const LogoWrapper = styled.div`
 `
 
 export const Logo = styled.img`
-    height: 30px;
+    height: 80%;
 `
 
 export const TopBottonWrapper = styled.div`

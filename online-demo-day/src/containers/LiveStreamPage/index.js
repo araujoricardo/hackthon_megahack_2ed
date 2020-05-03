@@ -7,7 +7,7 @@ import {LivePageWrapper, LogoWrapper, Logo, ChatWrapper,
         ProfileSideBar, ContentWrapper} from "./styled"
 import logoImg from "../../images/logo.png"
 import CardLiveStream from '../../components/CardLivestream'
-import MiniCardProfileSideBar from "../../components/MiniCardProfileSideBar"
+import ChatLive from '../../components/ChatLive'
 
 
 class LiveStreamPage extends React.Component{
@@ -33,7 +33,7 @@ class LiveStreamPage extends React.Component{
                 </ContentWrapper>
 
                 <ChatWrapper>
-                    Aqui vai o chat
+                    <ChatLive></ChatLive>
                 </ChatWrapper>
 
             </LivePageWrapper>
