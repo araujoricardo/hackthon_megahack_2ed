@@ -63,7 +63,7 @@ export class SignupStartupUC {
     } catch(err) {
       throw {
         code: err.statusCode || 400,
-        message: err.message || ""
+        message: err.message || "An error occurred during signup"
       }
     }
   }

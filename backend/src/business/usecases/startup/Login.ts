@@ -1,36 +1,35 @@
-import { CompanyGateway } from "../../gateways/StartupGateway";
-import { BcryptGateway } from "../../gateways/BcryptGateway";
-import { JWTAuthGateway } from "../../gateways/JwtAuthGateway";
-// import { NotFoundError } from "../../errors/notFoundError";
-// import { UnauthorizedError } from "../../errors/unauthorizedError";
+import { StartupGateway } from "../../gateways/StartupGateway"
+import { BcryptGateway } from "../../gateways/BcryptGateway"
+import { JWTAuthGateway } from "../../gateways/JwtAuthGateway"
+import { NotFoundError } from "../../errors/NotFoundError"
+import { UnauthorizedError } from "../../errors/UnauthorizedError"
 
 
-export class LoginUC {
+export class LoginStartupUC {
   constructor(
-    private db: CompanyGateway,
+    private db: StartupGateway,
     private jwtAuth: JWTAuthGateway,
     private bcrypt: BcryptGateway
   ) { }
 
-  public async execute(input: LoginUCInput): Promise<LoginUCOutput | undefined> {
+  public async execute(input: LoginStartupUCInput): Promise<LoginStartupUCOutput | undefined> {
     try {
+      const startup = await this.db.getStartupByEmail(input.email)
 
-      const company = await this.db.getCompanyByEmail(input.email)
-
-      if (!company) {
-        throw new NotFoundError("Unregistered company")
+      if(!startup) {
+        throw new NotFoundError('Startup not exist')
       }
 
-      const checkPassword = await this.bcrypt.compareHash(input.password, company.getPassword())
+      const checkPassword = await this.bcrypt.compareHash(input.password, startup.getPassword())
 
       if (!checkPassword) {
-        // throw new UnauthorizedError("Invalid email or password")
+        throw new UnauthorizedError("Invalid email or password")
       }
 
-      const token = this.jwtAuth.generateToken(company.getId());
+      const token = this.jwtAuth.generateToken(startup.getId());
 
       return {
-        message: "Company successfully logged in",
+        message: "Startup successfully logged in",
         token: token
       };
     } catch (err) {
@@ -42,12 +41,12 @@ export class LoginUC {
   }
 }
 
-export interface LoginUCInput {
+export interface LoginStartupUCInput {
   email: string
   password: string
 }
 
-export interface LoginUCOutput {
+export interface LoginStartupUCOutput {
   message: string
   token: string
 }
