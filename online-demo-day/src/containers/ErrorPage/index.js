@@ -5,12 +5,12 @@ import {ErrorPageWrapper, LogoWrapper,TopBottonWrapper, ContentWrapper, ContentT
     Logo, ButtonTop  } from "./style";
 import logoImg from "../../images/logo.png";
 import {routes} from "../Router";
-
+import Header from "../Header";
 
 class ErrorPage extends React.Component{
 
     render(){
-        const {goBack, goToLoginPage, goToHomePage, goToContactPage, goToAboutPage}=this.props
+        const {goBack, goToHomePage}=this.props
 
         return(
             <ErrorPageWrapper>
@@ -18,13 +18,8 @@ class ErrorPage extends React.Component{
                     <Logo src={logoImg} onClick={goToHomePage}/>
                 </LogoWrapper>
 
-                <TopBottonWrapper>
-                    {/* //estou fazendo em ordem alfabética, parei aqui */}
-                    
-                    <ButtonTop color="primary" onClick={goToLoginPage}>LOGIN</ButtonTop>
-                    <ButtonTop color="primary" onClick={goToAboutPage}>SOBRE NÓS</ButtonTop>
-                    <ButtonTop color="primary">PLANOS</ButtonTop>
-                    <ButtonTop color="primary" onClick={goToContactPage}>CONTATO</ButtonTop>
+                <TopBottonWrapper>                    
+                    <Header/>
                 </TopBottonWrapper>
 
                 <ContentWrapper>
@@ -43,10 +38,6 @@ const mapDispatchToProps = dispatch =>{
     return{
         goBack: () => dispatch(goBack()),
         goToHomePage: () => dispatch(push(routes.root)),
-        goToLoginPage: () => dispatch(push(routes.login)),
-        goToAboutPage:() => dispatch(push(routes.about)),
-        goToErrorPage: () => dispatch(push(routes.errorpage)),
-        goToContactPage: () => dispatch(push(routes.contactpage))
     }
 }
 
