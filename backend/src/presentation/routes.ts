@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import { signupStartupEndpoint } from "./endpoints/startup/signup";
 import { loginStartupEndpoint } from "./endpoints/startup/login";
 import { signupInvestorEndpoint } from "./endpoints/investor/signup";
@@ -11,6 +12,7 @@ import { getStartupDetailsEndpoint } from "./endpoints/investor/getStartupDetail
 
 const app = express();
 app.use(express.json());
+app.use(cors());
 
 
 app.post("/signup/startup", signupStartupEndpoint)
