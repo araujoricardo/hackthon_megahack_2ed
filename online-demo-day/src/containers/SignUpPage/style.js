@@ -25,6 +25,30 @@ export const Logo = styled.img`
     cursor: pointer;
 `
 
+export const TopBottonWrapper = styled.div`
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-column:2;
+`
+
+export const ButtonTop = styled(Button)`
+&&{
+    border-radius: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+    color: white;
+
+    :hover{
+        color: #12A2F4;
+        background-color: white;
+    };
+}
+`
 
 export const PaperWrapper = styled.div`
     grid-column: 2;
@@ -61,8 +85,6 @@ export const CheckboxWrapper = styled.div`
     justify-content: center;
     grid-column: 1/3;
 `
-
-
 
 export const SignUpH1 = styled.h1`
     text-align: center;

@@ -1,6 +1,7 @@
 import React from 'react';
 import {PaperWrapper, SignUpWrapper, SignUpPageWrapper, LogoWrapper, Logo, GoBackIcon,
-        NameInput, SignUpH1, LastNameInput, SignUpInput, CheckboxWrapper, BotaoConfirm, BotaoWrapper, PaperSignUp} from './style';
+        NameInput, SignUpH1, LastNameInput, SignUpInput, CheckboxWrapper, BotaoConfirm, 
+        BotaoWrapper, PaperSignUp, TopBottonWrapper,ButtonTop } from './style';
 import { connect } from "react-redux";
 import  {routes} from "../Router";
 import { push, goBack } from "connected-react-router";
@@ -12,7 +13,8 @@ class SignUpPage extends React.Component{
 
 
     render(){
-        const { goToSignUpPage, goToBackPage, goToHomePage } = this.props;
+        const { goToBackPage, goToHomePage , goToLoginPage,goToAboutPage,
+                goToErrorPage } = this.props;
 
         return (
           <SignUpPageWrapper>
@@ -20,6 +22,13 @@ class SignUpPage extends React.Component{
             <LogoWrapper>
               <Logo src={logoImg} onClick={goToHomePage}></Logo>
             </LogoWrapper>
+
+            <TopBottonWrapper>
+              <ButtonTop color="primary" onClick={goToLoginPage}>LOGIN</ButtonTop>
+              <ButtonTop color="primary" onClick={goToAboutPage}>SOBRE NÓS</ButtonTop>
+              <ButtonTop color="primary" onClick={goToErrorPage}>PLANOS</ButtonTop>
+              <ButtonTop color="primary" onClick={goToErrorPage}>CONTATO</ButtonTop>
+            </TopBottonWrapper>
             
             <PaperWrapper>
               <PaperSignUp>
@@ -63,7 +72,7 @@ class SignUpPage extends React.Component{
                   />
                   </CheckboxWrapper>
                   <BotaoWrapper>
-                    <BotaoConfirm onClick={goToSignUpPage}>CRIAR</BotaoConfirm>
+                    <BotaoConfirm>CRIAR</BotaoConfirm>
                   </BotaoWrapper>
                 </SignUpWrapper>
               </PaperSignUp>
@@ -75,9 +84,11 @@ class SignUpPage extends React.Component{
 
 const mapDispatchToProps = (dispatch) =>{
     return{
-      goToSignUpPage: () => dispatch(push(routes.signuppage)),
+      goToLoginPage: () => dispatch(push(routes.login)),
       goToHomePage: () => dispatch(push(routes.root)),
-      goToBackPage: () => dispatch(goBack())
+      goToBackPage: () => dispatch(goBack()),
+      goToAboutPage:() => dispatch(push(routes.about)),
+      goToErrorPage: () => dispatch(push(routes.errorpage))
     }
   }
 

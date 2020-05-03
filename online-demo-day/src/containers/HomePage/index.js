@@ -8,7 +8,6 @@ import {HomePageWrapper, ButtonTop, SignUpButton, ContentText,
 import logoImg from "../../images/logo.png"
 
 
-
 class HomePage extends React.Component{
 
 
