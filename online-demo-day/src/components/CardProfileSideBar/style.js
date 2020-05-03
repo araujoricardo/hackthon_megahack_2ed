@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Button from "@material-ui/core/Button";
+import Typography from '@material-ui/core/Typography'
 
 export const ProfileSideBarWrapper = styled.div`
     display:grid;
@@ -20,6 +21,7 @@ export const PictureWrapper = styled.div`
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    padding-top: 10px;
 `
 
 export const ProfilePicture = styled.img`
@@ -29,20 +31,19 @@ export const ProfilePicture = styled.img`
 `
 
 export const LinksWrapper = styled.div`
+    margin-top: 10px;
     display: flex;
     width: 90%;
     flex-direction: column;
     text-align: left;
 `
 
-export const TextWrapper = styled(Button)`
+export const ButtonWrapper = styled(Button)`
 &&{
     display: flex;
     justify-content: flex-start;
     color: white;
-    font-size: 18px;
 }
-    
 `
 
 export const LogoutWrapper = styled.div`
@@ -58,7 +59,6 @@ export const LogoutButton = styled(Button)`
     background-color: #12A2F4;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.46);
     border-radius: 10px;
-    font-size: 20px;
     font-style: normal;
     font-weight: 500;
     color: #E5E5E5;
@@ -66,6 +66,22 @@ export const LogoutButton = styled(Button)`
 }
 `
 
-export const TextButton = styled.p`
-    margin-left: 10px;
+export const TextButton = styled(Typography)`
+    
+    &&{
+        color: white;
+        margin-left: 10px;
+        font-size: 1.3em;
+    }
+`
+
+export const TextName = styled(Typography)`
+    &&{
+        color: white;
+        font-size: 1.3em;
+    }
+`
+
+export const TextButtonLogout = styled(TextName)`
+
 `

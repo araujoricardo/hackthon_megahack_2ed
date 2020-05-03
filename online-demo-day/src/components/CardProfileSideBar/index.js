@@ -1,7 +1,7 @@
 import React from "react";
 import {ProfileSideBarWrapper, ProfilePicture, PictureWrapper,
-        LinksWrapper, LogoutWrapper, TextWrapper, LogoutButton,
-        TextButton} from "./style"
+        LinksWrapper, LogoutWrapper, ButtonWrapper, LogoutButton,
+        TextButton, TextName, TextButtonLogout} from "./style"
 import { connect } from "react-redux";
 import { push } from "connected-react-router";
 import { routes } from "../../containers/Router";
@@ -20,36 +20,38 @@ class CardProfileSideBar extends React.Component{
             <ProfileSideBarWrapper>        
                 <PictureWrapper>
                     <ProfilePicture src={require("../../images/image.png")}/>
-                    <p>Bill Gates</p>
+                    <TextName>Bill Gates</TextName>
                 </PictureWrapper>
                 <LinksWrapper>
-                    <TextWrapper>
+                    <ButtonWrapper>
                         <NotificationIcon/>
-                        <TextButton>Notificações</TextButton>
-                    </TextWrapper>
+                        <TextButton variant="button">Notificações</TextButton>
+                    </ButtonWrapper>
 
-                    <TextWrapper>
+                    <ButtonWrapper>
                         <MensageIcon/>
-                        <TextButton>Mensagens</TextButton>
-                    </TextWrapper>
+                        <TextButton variant="button">Mensagens</TextButton>
+                    </ButtonWrapper>
 
-                    <TextWrapper>
+                    <ButtonWrapper>
                         <LikeIcon/>
-                        <TextButton>Favoritos</TextButton>
-                    </TextWrapper>
+                        <TextButton variant="button">Favoritos</TextButton>
+                    </ButtonWrapper>
 
-                    <TextWrapper>
+                    <ButtonWrapper>
                         <EventIcon/>
-                        <TextButton>Eventos</TextButton>
-                    </TextWrapper>
+                        <TextButton variant="button">Eventos</TextButton>
+                    </ButtonWrapper>
 
-                    <TextWrapper>
+                    <ButtonWrapper>
                         <AccountIcon/>
-                        <TextButton>Perfil</TextButton>
-                    </TextWrapper>
+                        <TextButton variant="button">Perfil</TextButton>
+                    </ButtonWrapper>
                 </LinksWrapper>
                 <LogoutWrapper>
-                    <LogoutButton variant="contained" color="primary" onClick={goToHomePage}>SAIR</LogoutButton>
+                    <LogoutButton variant="contained" color="primary" onClick={goToHomePage}>
+                        <TextButtonLogout variant="button">SAIR</TextButtonLogout>
+                    </LogoutButton>
                 </LogoutWrapper>
             </ProfileSideBarWrapper>
         )

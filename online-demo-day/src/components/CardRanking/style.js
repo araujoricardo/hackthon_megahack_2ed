@@ -28,7 +28,7 @@ export const PlaceWrapper = styled.div`
 `
 
 export const PlaceText = styled.h3`
-    font-size: 70px;
+    font-size: 3.5em;
     font-weight: 500;
     margin: 0;
 `
@@ -38,7 +38,7 @@ export const SetorText = styled.p`
 `
 
 export const EmpresaText = styled.p`
-    font-size: 20px;
+    font-size: 1.3em;
     margin: 0;
 `
 
