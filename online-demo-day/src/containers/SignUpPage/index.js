@@ -1,20 +1,20 @@
 import React from 'react';
 import {PaperWrapper, SignUpWrapper, SignUpPageWrapper, LogoWrapper, Logo, GoBackIcon,
         NameInput, SignUpH1, LastNameInput, SignUpInput, CheckboxWrapper, BotaoConfirm, 
-        BotaoWrapper, PaperSignUp, TopBottonWrapper,ButtonTop } from './style';
+        BotaoWrapper, PaperSignUp, TopBottonWrapper} from './style';
 import { connect } from "react-redux";
 import  {routes} from "../Router";
 import { push, goBack } from "connected-react-router";
 import logoImg from "../../images/logo.png"
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Header from "../Header";
 
 class SignUpPage extends React.Component{
 
 
     render(){
-        const { goToBackPage, goToHomePage , goToLoginPage,goToAboutPage,
-                goToErrorPage, goToContactPage } = this.props;
+        const { goToBackPage, goToHomePage } = this.props;
 
         return (
           <SignUpPageWrapper>
@@ -24,10 +24,7 @@ class SignUpPage extends React.Component{
             </LogoWrapper>
 
             <TopBottonWrapper>
-              <ButtonTop color="primary" onClick={goToLoginPage}>LOGIN</ButtonTop>
-              <ButtonTop color="primary" onClick={goToAboutPage}>SOBRE NÓS</ButtonTop>
-              <ButtonTop color="primary" onClick={goToErrorPage}>PLANOS</ButtonTop>
-              <ButtonTop color="primary" onClick={goToContactPage}>CONTATO</ButtonTop>
+              {/* <Header/> */}
             </TopBottonWrapper>
             
             <PaperWrapper>
@@ -84,12 +81,8 @@ class SignUpPage extends React.Component{
 
 const mapDispatchToProps = (dispatch) =>{
     return{
-      goToLoginPage: () => dispatch(push(routes.login)),
       goToHomePage: () => dispatch(push(routes.root)),
-      goToBackPage: () => dispatch(goBack()),
-      goToAboutPage:() => dispatch(push(routes.about)),
-      goToErrorPage: () => dispatch(push(routes.errorpage)),
-      goToContactPage: () => dispatch(push(routes.contactpage))
+      goToBackPage: () => dispatch(goBack())
     }
   }
 
