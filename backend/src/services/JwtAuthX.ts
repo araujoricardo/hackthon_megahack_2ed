@@ -1,5 +1,5 @@
 import * as jwt from "jsonwebtoken"
-import { JWTAuthGateway } from "../business/gateways/JwtAuthGateway"
+import { JWTAuthGateway } from "../business/gateways/JwtAuthGatewayX"
 
 export class JWTAuth implements JWTAuthGateway {
   private expiresIn = "1h"

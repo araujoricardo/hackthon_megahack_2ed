@@ -1,5 +1,5 @@
 import { FavoriteGateway } from "../../gateways/FavoriteGateway";
-import { StartupResume } from "../../entities/Startup";
+import { StartupResume } from "../../entities/StartupX";
 
 export class RankingUC {
   constructor(

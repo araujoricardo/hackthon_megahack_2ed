@@ -1,10 +1,10 @@
 import { v4 } from "uuid"
-import { BcryptGateway } from "../../gateways/BcryptGateway"
-import { JWTAuthGateway } from "../../gateways/JwtAuthGateway"
+import { BcryptGateway } from "../../gateways/BcryptGatewayX"
+import { JWTAuthGateway } from "../../gateways/JwtAuthGatewayX"
 import { ConflictError } from "../../errors/ConflictError"
 import { BadRequestError } from "../../errors/BadRequestError"
-import { Investor } from "../../entities/Investor"
-import { InvestorGateway } from "../../gateways/InvestorGateway"
+import { Investor } from "../../entities/InvestorX"
+import { InvestorGateway } from "../../gateways/InvestorGatewayX"
 
 export class SignupInvestorUC {
   constructor(
