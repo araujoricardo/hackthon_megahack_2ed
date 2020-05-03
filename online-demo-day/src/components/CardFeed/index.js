@@ -1,9 +1,8 @@
 import React from "react";
 import {CardFeedWrapper, LogoWrapper, TitleWrapper, TagWrapper, DescriptionWrapper, 
-        VideoWrapper, VoteWrapper, InfoBotton, Logo, Thumbnail} from "./style";
+        VideoWrapper, VoteWrapper, InfoBotton, Logo, Thumbnail, LikeButton, ShareButton} from "./style";
+import Typography from '@material-ui/core/Typography';
 import Button from "@material-ui/core/Button";
-import FavoriteIcon from '@material-ui/icons/FavoriteBorder';
-import ShareIcon from '@material-ui/icons/Share';
 
 
 export default function CardFeed(props){
@@ -12,17 +11,18 @@ export default function CardFeed(props){
             <LogoWrapper>
                 <Logo src={props.logoImg}/>
             </LogoWrapper>
-
-            <TitleWrapper>{props.title}</TitleWrapper>
+            <TitleWrapper><b>{props.title}</b></TitleWrapper>
             <DescriptionWrapper>{props.description}</DescriptionWrapper>
             <VideoWrapper>
                 <Thumbnail src={props.thumbnail}/>
             </VideoWrapper>
-            <TagWrapper>TAG</TagWrapper>
+            <TagWrapper>
+                <Typography color="textSecondary"><i>Tecnologia Web{props.tags}</i></Typography>
+            </TagWrapper>
             <VoteWrapper>
                 <p>{props.votes}</p>
-                <FavoriteIcon/>
-                <ShareIcon/>
+                <LikeButton/>
+                <ShareButton/>
             </VoteWrapper>
             <InfoBotton>
                 <Button variant="contained" color="primary">SAIBA MAIS</Button>
