@@ -11,8 +11,6 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Header from "../Header";
 
 class SignUpPage extends React.Component{
-
-
     render(){
         const { goToBackPage, goToHomePage } = this.props;
 
@@ -69,7 +67,7 @@ class SignUpPage extends React.Component{
                   />
                   </CheckboxWrapper>
                   <BotaoWrapper>
-                    <BotaoConfirm>CRIAR</BotaoConfirm>
+                    <BotaoConfirm variant="contained" color="primary">CRIAR</BotaoConfirm>
                   </BotaoWrapper>
                 </SignUpWrapper>
               </PaperSignUp>
@@ -84,6 +82,5 @@ const mapDispatchToProps = (dispatch) =>{
       goToHomePage: () => dispatch(push(routes.root)),
       goToBackPage: () => dispatch(goBack())
     }
-  }
-
-  export default connect(null, mapDispatchToProps)(SignUpPage);
+}
+export default connect(null, mapDispatchToProps)(SignUpPage);
