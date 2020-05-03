@@ -1,5 +1,5 @@
 import * as bcrypt from "bcrypt"
-import { BcryptGateway } from "../business/gateways/BcryptGateway"
+import { BcryptGateway } from "../business/gateways/BcryptGatewayX"
 
 
 export class Bcrypt implements BcryptGateway {

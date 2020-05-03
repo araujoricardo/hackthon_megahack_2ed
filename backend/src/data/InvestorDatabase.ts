@@ -1,6 +1,6 @@
-import { InvestorGateway } from "../business/gateways/InvestorGateway";
+import { InvestorGateway } from "../business/gateways/InvestorGatewayX";
 import { BaseDatabase } from "./BaseDatabase";
-import { Investor } from "../business/entities/Investor";
+import { Investor } from "../business/entities/InvestorX";
 
 
 export class InvestorDatabase extends BaseDatabase implements InvestorGateway {

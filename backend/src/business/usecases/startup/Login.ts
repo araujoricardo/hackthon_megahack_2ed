@@ -1,6 +1,6 @@
 import { StartupGateway } from "../../gateways/StartupGateway"
-import { BcryptGateway } from "../../gateways/BcryptGateway"
-import { JWTAuthGateway } from "../../gateways/JwtAuthGateway"
+import { BcryptGateway } from "../../gateways/BcryptGatewayX"
+import { JWTAuthGateway } from "../../gateways/JwtAuthGatewayX"
 import { NotFoundError } from "../../errors/NotFoundError"
 import { UnauthorizedError } from "../../errors/UnauthorizedError"
 
