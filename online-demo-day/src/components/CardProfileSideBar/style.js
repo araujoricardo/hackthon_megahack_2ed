@@ -11,6 +11,7 @@ export const ProfileSideBarWrapper = styled.div`
     font-size: 30px;
     line-height: 38px;
     text-align: center;
+    height:100%;
 `
 
 export const PictureWrapper = styled.div`
@@ -19,14 +20,14 @@ export const PictureWrapper = styled.div`
     width: 90%;
     display:flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     padding-top: 10px;
 `
 
 export const ProfilePicture = styled.img`
-    height:164px;
-    width:164px;
+    height:124px;
+    width:124px;
     border-radius: 50%;
 `
 
@@ -51,7 +52,7 @@ export const LogoutWrapper = styled.div`
     width: 90%;
     display:flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
 `
 
 export const LogoutButton = styled(Button)`
