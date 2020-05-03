@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import TextField from '@material-ui/core/TextField';
+import IconButton from '@material-ui/core/IconButton';
 
 
 export const ProfilePageWrapper = styled.div`
@@ -25,6 +27,34 @@ export const ContentWrapper = styled.div`
     display:grid;
     justify-content: center;
     border-radius: 25px 25px 0 0;
+`
+
+export const SearchWrapper = styled.div`
+    grid-row: 1;
+    grid-column: 2;
+    width: 90%;
+    height: 50%;
+    margin: 10px 0 10px 0;
+    display: grid;
+    grid-template-columns: 90% 10%;
+    justify-content: space-between;
+    justify-self: center;
+    align-self: center;
+    border-radius: 10px;
+    background-color: white;
+`
+
+export const InputSearch = styled(TextField)`
+    grid-column: 1;
+    &&{
+        margin-left: 10px;
+    }
+`
+export const ButtonSearchWrapper = styled(IconButton)`
+    grid-column: 2;
+    display: flex;
+    &&{
+    }
 `
 
 export const PropertyWrapper = styled.div`
