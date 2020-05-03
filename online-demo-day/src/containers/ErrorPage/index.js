@@ -2,7 +2,7 @@ import React from "react";
 import {connect} from "react-redux"
 import { goBack ,push} from "connected-react-router";
 import {ErrorPageWrapper, LogoWrapper,TopBottonWrapper, ContentWrapper, ContentText,
-    Logo, ButtonTop  } from "./style";
+    Logo } from "./style";
 import logoImg from "../../images/logo.png";
 import {routes} from "../Router";
 import Header from "../Header";

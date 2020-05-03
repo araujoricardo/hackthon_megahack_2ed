@@ -1,6 +1,6 @@
 import React from "react";
 import { AboutWrapper, LogoWrapper,TopBottonWrapper, ContentWrapper, ContentText,
-         Logo, ButtonTop  } from "./style";
+         Logo  } from "./style";
 import logoImg from "../../images/logo.png"
 import { push } from "connected-react-router";
 import {connect} from "react-redux";

@@ -1,7 +1,7 @@
 import React from 'react';
 import {PaperWrapper, SignUpWrapper, SignUpPageWrapper, LogoWrapper, Logo, GoBackIcon,
         NameInput, SignUpH1, LastNameInput, SignUpInput, CheckboxWrapper, BotaoConfirm, 
-        BotaoWrapper, PaperSignUp, TopBottonWrapper,ButtonTop } from './style';
+        BotaoWrapper, PaperSignUp, TopBottonWrapper} from './style';
 import { connect } from "react-redux";
 import  {routes} from "../Router";
 import { push, goBack } from "connected-react-router";

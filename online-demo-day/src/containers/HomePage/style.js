@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Button from '@material-ui/core/Button';
+import Button from "@material-ui/core/Button"
 import Typography from '@material-ui/core/Typography'
 
 
@@ -30,23 +30,6 @@ export const TopBottonWrapper = styled.div`
     justify-content: space-evenly;
     align-items: center;
     grid-column:2;
-`
-
-export const ButtonTop = styled(Button)`
-&&{
-    border-radius: 5px;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 25px;
-    line-height: 30px;
-    color: white;
-
-    :hover{
-        color: #12A2F4;
-        background-color: white;
-    };
-}
 `
 
 export const ContentWrapper = styled.div`

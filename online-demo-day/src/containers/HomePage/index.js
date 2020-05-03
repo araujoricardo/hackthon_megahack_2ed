@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { push } from "connected-react-router";
 import { routes } from "../Router";
-import {HomePageWrapper, ButtonTop, SignUpButton, ContentText,
+import {HomePageWrapper, SignUpButton, ContentText,
         LogoWrapper, TopBottonWrapper, Logo, ContentWrapper, SignUpWrapper
         } from "./style";
 import logoImg from "../../images/logo.png";
