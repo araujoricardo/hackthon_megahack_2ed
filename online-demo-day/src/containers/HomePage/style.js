@@ -69,9 +69,5 @@ export const SignUpButton = styled(Button)`
     line-height: 37px;
     color: #E5E5E5;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.35);
-
-    :hover{
-        background-color: #466585;
-    }
 }
 `

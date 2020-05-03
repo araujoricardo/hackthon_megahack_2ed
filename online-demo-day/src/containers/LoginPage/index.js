@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import  {routes} from "../Router";
 import { push, goBack } from "connected-react-router";
-import TextField from "@material-ui/core/TextField";
-import Button from "@material-ui/core/Button";
-import {PaperWrapper, LoginWrapper, LoginPageWrapper, LogoWrapper, Logo, GoBackIcon} from './style'
+import {PaperWrapper, LoginWrapper, LoginPageWrapper, LogoWrapper, Logo, GoBackIcon, PaperLogin,
+        LoginInput, PasswordInput, ButtonLogin, CheckboxWrapper} from './style'
 import logoImg from "../../images/logo.png"
+import Checkbox from '@material-ui/core/Checkbox';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
 
 
 class LoginPage extends Component {
@@ -21,21 +22,32 @@ class LoginPage extends Component {
         </LogoWrapper>
         
         <PaperWrapper>
-          <GoBackIcon onClick={goToBackPage} />
-          <LoginWrapper>
-            <TextField
-              name="email"
-              type="email"
-              label="E-mail"
-            />
-            <TextField
-              name="password"
-              type="password"
-              label="Password"
-            />
-            <Button onClick={goToFeedPage}>Login</Button>
-            <Button onClick={goToSignUpPage}>CADASTRE-SE</Button>
-          </LoginWrapper>
+            <PaperLogin>
+            <GoBackIcon onClick={goToBackPage} />
+            <LoginWrapper>
+              <LoginInput
+                name="email"
+                type="email"
+                label="E-mail"
+                variant="filled"
+              />
+              <PasswordInput
+                name="password"
+                type="password"
+                label="Password"
+                variant="filled"
+              />
+
+                <CheckboxWrapper>
+                  <FormControlLabel
+                    control={<Checkbox color="primary" />}
+                    label="Salvar email & senha"
+                  />
+                  </CheckboxWrapper>
+              
+              <ButtonLogin variant="contained" color="primary" onClick={goToFeedPage}>Login</ButtonLogin>
+            </LoginWrapper>
+          </PaperLogin>
         </PaperWrapper>
       </LoginPageWrapper>
       

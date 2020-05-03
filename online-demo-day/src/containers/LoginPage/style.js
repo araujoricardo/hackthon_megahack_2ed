@@ -1,22 +1,31 @@
 import styled from 'styled-components'
 import Paper from '@material-ui/core/Paper'
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 
 export const LoginPageWrapper = styled.div`
-    position: absolute;
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-rows: 12% 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 12% 100px 1fr;
+    grid-template-columns: 1fr 1fr;
     font-family: Roboto;
 `
 
-export const PaperWrapper = styled(Paper)`
-    display: flex;
+export const PaperWrapper = styled.div`
     grid-column: 2;
-    grid-row: 2;
-    height: 50%;
+    grid-row: 2/4;
+    height: 100%;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+`
+
+export const PaperLogin = styled(Paper)`
+    padding: 20px;
+    width:400px;
 `
 
 export const LoginWrapper = styled.form`
@@ -27,6 +36,30 @@ export const LoginWrapper = styled.form`
     justify-items: center;
     display: grid;
 `;
+
+export const LoginInput = styled(TextField)`
+
+`
+
+export const PasswordInput = styled(TextField)`
+
+`
+
+export const ButtonLogin = styled(Button)`
+&&{
+    background-color: #12A2F4;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 30px;
+    color: #E5E5E5;
+
+}  
+`
+
+export const CheckboxWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+`
 
 export const LogoWrapper = styled.div`
     display:flex;
