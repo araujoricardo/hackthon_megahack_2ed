@@ -4,8 +4,10 @@ import { routes } from "../Router"
 import { push } from "connected-react-router"
 import { getFeed } from "../../actions/investor/feed"
 import CardFeed from "../../components/CardFeed"
-import { FeedPageWrapper, ProfileSideBar, ContentWrapper, RankingWrapper, LogoWrapper, Logo,
-        SearchWrapper, TitleRankingWrapper, TitleRanking, InputSearch, ButtonSearchWrapper  } from "./style"
+import {
+  FeedPageWrapper, ProfileSideBar, ContentWrapper, RankingWrapper, LogoWrapper, Logo,
+  SearchWrapper, TitleRankingWrapper, TitleRanking, InputSearch, ButtonSearchWrapper
+} from "./style"
 import CardProfileSideBar from "../../components/CardProfileSideBar"
 import logoImg from "../../images/logo.png"
 import CardRanking from "../../components/CardRanking"
@@ -32,17 +34,18 @@ class FeedPage extends React.Component {
           <CardProfileSideBar
             events={goToEventPage}
             profile={goToProfileEntrepreneurPage} />
+        </ProfileSideBar>
 
 
-                <ProfileSideBar>
-                    <CardProfileSideBar
-                        events={goToEventPage}/>
-                </ProfileSideBar>
+        <ProfileSideBar>
+          <CardProfileSideBar
+            events={goToEventPage} />
+        </ProfileSideBar>
 
-                <SearchWrapper>
-                    <InputSearch label="Pesquisar..."></InputSearch>
-                    <ButtonSearchWrapper><SearchIcon></SearchIcon></ButtonSearchWrapper>
-                </SearchWrapper>
+        <SearchWrapper>
+          <InputSearch label="Pesquisar..."></InputSearch>
+          <ButtonSearchWrapper><SearchIcon></SearchIcon></ButtonSearchWrapper>
+        </SearchWrapper>
 
         <ContentWrapper>
           {feed.map(startup => (
@@ -56,15 +59,15 @@ class FeedPage extends React.Component {
           ))}
         </ContentWrapper>
 
-                <TitleRankingWrapper>
-                    <TitleRanking variant="h3" color="white">Ranking</TitleRanking>
-                </TitleRankingWrapper>
-                <RankingWrapper>
-                    <CardRanking/>
-                </RankingWrapper>
-            </FeedPageWrapper>
-        )
-    }
+        <TitleRankingWrapper>
+          <TitleRanking variant="h3" color="white">Ranking</TitleRanking>
+        </TitleRankingWrapper>
+        <RankingWrapper>
+          <CardRanking />
+        </RankingWrapper>
+      </FeedPageWrapper>
+    )
+  }
 
 
 
