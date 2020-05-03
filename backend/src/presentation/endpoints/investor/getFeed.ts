@@ -10,7 +10,7 @@ export const getFeedEndpoint = async (req: Request, res: Response) => {
     const uc = new GetFeedUC(new StartupDatabase(), new InvestorDatabase(), new JWTAuth())
 
     const result = await uc.execute({
-      token: req.body.token
+      token: req.headers.auth as string
     })
 
     res.status(200).send(result)

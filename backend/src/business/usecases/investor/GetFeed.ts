@@ -14,7 +14,7 @@ export class GetFeedUC {
 
   public async execute(input: GetFeedUCInput): Promise<GetFeedUCOutput> {
     try {
-      if (input.token === undefined || input.token === '') {
+      if (input === undefined || input.token === '') {
         throw new BadRequestError('Missing input')
       }
 
