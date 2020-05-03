@@ -1,36 +1,34 @@
 import React from "react";
 import {connect} from "react-redux"
-import { goBack ,push} from "connected-react-router";
-import {ErrorPageWrapper, LogoWrapper,TopBottonWrapper, ContentWrapper, ContentText,
-    Logo, ButtonTop  } from "./style";
-import logoImg from "../../images/logo.png";
 import {routes} from "../Router";
+import { goBack, push } from "connected-react-router";
+import { ContactPageWrapper, LogoWrapper,TopBottonWrapper, ContentWrapper, ContentText,
+        Logo, ButtonTop  } from "./style";
+import logoImg from "../../images/logo.png"
 
-
-class ErrorPage extends React.Component{
+class ContactPage extends React.Component{
 
     render(){
-        const {goBack, goToLoginPage, goToHomePage, goToContactPage, goToAboutPage}=this.props
-
+        const {goBack, goToLoginPage, goToHomePage, goToErrorPage, goToAboutPage}=this.props
         return(
-            <ErrorPageWrapper>
-                 <LogoWrapper>
+            <ContactPageWrapper>
+                <LogoWrapper>
                     <Logo src={logoImg} onClick={goToHomePage}/>
                 </LogoWrapper>
 
                 <TopBottonWrapper>
                     <ButtonTop color="primary" onClick={goToLoginPage}>LOGIN</ButtonTop>
                     <ButtonTop color="primary" onClick={goToAboutPage}>SOBRE NÓS</ButtonTop>
-                    <ButtonTop color="primary">PLANOS</ButtonTop>
-                    <ButtonTop color="primary" onClick={goToContactPage}>CONTATO</ButtonTop>
+                    <ButtonTop color="primary" onClick={goToErrorPage}>PLANOS</ButtonTop>
+                    <ButtonTop color="primary">CONTATO</ButtonTop>
                 </TopBottonWrapper>
-
+            
                 <ContentWrapper>
+                    <ContentText variant="p">Informações de contato aqui!</ContentText>
                     <button onClick={goBack}>VOLTAR</button>
-                    <ContentText variant="p">Esta página esta em desenvolvimento</ContentText>
                 </ContentWrapper>
-
-            </ErrorPageWrapper>
+            
+            </ContactPageWrapper>
         )
 
     }
@@ -48,4 +46,4 @@ const mapDispatchToProps = dispatch =>{
     }
 }
 
-export default connect (null, mapDispatchToProps) (ErrorPage); 
+export default connect (null, mapDispatchToProps) (ContactPage);

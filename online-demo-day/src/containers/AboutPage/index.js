@@ -10,7 +10,7 @@ import {routes} from "../Router";
 class AboutPage extends React.Component{
     
     render(){
-        const{goToLoginPage, goToHomePage}=this.props
+        const{goToLoginPage, goToHomePage, goToErrorPage, goToContactPage}=this.props
 
         return(
             <AboutWrapper>
@@ -21,8 +21,8 @@ class AboutPage extends React.Component{
                 <TopBottonWrapper>
                     <ButtonTop color="primary" onClick={goToLoginPage}>LOGIN</ButtonTop>
                     <ButtonTop color="primary">SOBRE NÓS</ButtonTop>
-                    <ButtonTop color="primary">PLANOS</ButtonTop>
-                    <ButtonTop color="primary">CONTATO</ButtonTop>
+                    <ButtonTop color="primary" onClick={goToErrorPage}>PLANOS</ButtonTop>
+                    <ButtonTop color="primary" onClick={goToContactPage}>CONTATO</ButtonTop>
                 </TopBottonWrapper>
 
                 <ContentWrapper>
@@ -39,7 +39,9 @@ class AboutPage extends React.Component{
 const mapDispatchToProps = dispatch =>{
     return{
         goToLoginPage: () => dispatch(push(routes.login)),
-        goToHomePage: () => dispatch(push(routes.root))
+        goToHomePage: () => dispatch(push(routes.root)),
+        goToErrorPage: () => dispatch(push(routes.errorpage)),
+        goToContactPage: () => dispatch(push(routes.contactpage))
     }
 }
 

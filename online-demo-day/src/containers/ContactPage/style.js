@@ -2,7 +2,8 @@ import styled from "styled-components";
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography'
 
-export const ErrorPageWrapper = styled.div`
+
+export const ContactPageWrapper = styled.div`
     position: absolute;
     height: 100%;
     width:100%;
@@ -65,3 +66,4 @@ export const ContentText = styled(Typography)`
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.53);
 }   
 `
+

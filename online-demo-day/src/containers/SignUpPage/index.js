@@ -14,7 +14,7 @@ class SignUpPage extends React.Component{
 
     render(){
         const { goToBackPage, goToHomePage , goToLoginPage,goToAboutPage,
-                goToErrorPage } = this.props;
+                goToErrorPage, goToContactPage } = this.props;
 
         return (
           <SignUpPageWrapper>
@@ -27,7 +27,7 @@ class SignUpPage extends React.Component{
               <ButtonTop color="primary" onClick={goToLoginPage}>LOGIN</ButtonTop>
               <ButtonTop color="primary" onClick={goToAboutPage}>SOBRE NÓS</ButtonTop>
               <ButtonTop color="primary" onClick={goToErrorPage}>PLANOS</ButtonTop>
-              <ButtonTop color="primary" onClick={goToErrorPage}>CONTATO</ButtonTop>
+              <ButtonTop color="primary" onClick={goToContactPage}>CONTATO</ButtonTop>
             </TopBottonWrapper>
             
             <PaperWrapper>
@@ -88,7 +88,8 @@ const mapDispatchToProps = (dispatch) =>{
       goToHomePage: () => dispatch(push(routes.root)),
       goToBackPage: () => dispatch(goBack()),
       goToAboutPage:() => dispatch(push(routes.about)),
-      goToErrorPage: () => dispatch(push(routes.errorpage))
+      goToErrorPage: () => dispatch(push(routes.errorpage)),
+      goToContactPage: () => dispatch(push(routes.contactpage))
     }
   }
 
