@@ -174,3 +174,45 @@ export class Startup {
     this.status = status
   }
 }
+
+
+export class StartupResume {
+  constructor(
+    private id: string,
+    private name: string,
+    private tags: string,
+    private votes: string
+  ) {}
+
+  public getId(): string {
+    return this.id
+  }
+
+  public setId(id: string): void {
+    this.id = id
+  }
+
+  public getName(): string {
+    return this.name
+  }
+
+  public setName(name: string): void {
+    this.name = name
+  }
+
+  public getTags(): string {
+    return this.tags
+  }
+
+  public setTags(tags: string): void {
+    this.tags = tags
+  }
+
+  public getVotes(): string {
+    return this.votes
+  }
+
+  public setVotes(votes: string): void {
+    this.votes = votes
+  }
+}

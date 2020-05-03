@@ -1,18 +1,17 @@
 import { Request, Response } from "express";
-import { LoginUC } from "../../../business/usecases/user/login";
-import { UserDatabase } from "../../../data/StartupDatabase";
-import { BcryptPassword } from "../../../utils/bcrypt";
-import { JWTAutentication } from "../../../utils/jwtAutentication"
-import { Validators } from "../../../utils/validators";
+import { Bcrypt } from "../../../services/bcrypt";
+import { JWTAuth } from "../../../services/jwtAuth"
+import { InvestorDatabase } from "../../../data/InvestorDatabase";
+import { LoginInvestorUC } from "../../../business/usecases/investor/Login";
 
 
-export const loginEndpoint = async (req: Request, res: Response) => {
+export const loginInvestorEndpoint = async (req: Request, res: Response) => {
   try {
-    const uc = new LoginUC(new UserDatabase(), new JWTAutentication(), new BcryptPassword(), new Validators());
+    const uc = new LoginInvestorUC(new InvestorDatabase(), new JWTAuth(), new Bcrypt());
 
     const result = await uc.execute({
       email: req.body.email,
-      password: req.body.password
+      password: req.body.password,
     });
 
     res.status(200).send(result);

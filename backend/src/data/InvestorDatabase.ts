@@ -1,110 +1,59 @@
+import { InvestorGateway } from "../business/gateways/InvestorGateway";
 import { BaseDatabase } from "./BaseDatabase";
-import { Video, VideoWithUser } from "../business/entities/video";
-import { VideoGateway } from "../business/gateways/videoGateway";
+import { Investor } from "../business/entities/Investor";
 
 
-export class VideoDatabase extends BaseDatabase implements VideoGateway {
-  private videoTableName = "videos";
+export class InvestorDatabase extends BaseDatabase implements InvestorGateway {
+  private investorTableName = "INVESTOR";
 
-  private mapDBDataToVideo(input: any): Video {
-    return new Video(
-      input.id, 
-      input.url, 
-      input.thumbnail, 
-      input.title, 
-      input.description, 
-      input.creationTime,
-      input.userId
+  private mapDBDataToInvestor(input: any): Investor {
+    return new Investor(
+      input.id,
+      input.name,
+      input.email,
+      input.password,
+      input.picture,
+      input.location,
+      input.tags, 
+      input.portfolio,
+      input.likedCompanies 
     )
   }
 
-  private mapDBDataToVideoWithUser(input: any): VideoWithUser {
-    return new VideoWithUser(
-      input.id, 
-      input.url, 
-      input.thumbnail, 
-      input.title, 
-      input.description, 
-      input.creationTime,
-      input.userId,
-      input.userName,
-      input.userPicture
-    )
-  }
-
-  public async uploadVideo(video: Video): Promise<void> {
+  public async createInvestor(investor: Investor): Promise<void> {
     await this.connection.raw(`
-      INSERT INTO ${this.videoTableName} (id, url, thumbnail, title, description, creationTime, userId) 
+      INSERT INTO ${this.investorTableName} (id, name, email, password, picture, location, tags, portfolio, likedCompanies) 
       VALUES(
-        '${video.getId()}',
-        '${video.getUrl()}',
-        '${video.getThumbnail()}',
-        '${video.getTitle()}',
-        '${video.getDescription()}',
-        '${video.getCreationTime()}',
-        '${video.getUserId()}'
-      );`
-    )
+        '${investor.getId()}',
+        '${investor.getName()}',
+        '${investor.getEmail()}',
+        '${investor.getPassword()}',
+        '${investor.getPicture()}',
+        '${investor.getLocation()}',
+        '${investor.getTags()}',
+        '${investor.getPortfolio()}',
+        '${investor.getLikedCompanies()}'
+      );
+    `)
   }
 
-  public async getUserVideos(userId: string): Promise<Video[]> {
+  public async getInvestorByEmail(email: string): Promise<Investor | undefined> {
     const result = await this.connection.raw(`
       SELECT * 
-      FROM ${this.videoTableName}
-      WHERE userId = '${userId}'
-      ORDER BY creationTime DESC;
+      FROM ${this.investorTableName}
+      WHERE email = '${email}';
     `)
 
-    return result[0] && result[0].map((video: any) => {
-      return this.mapDBDataToVideo(video)
-    })
+    return result[0][0] && this.mapDBDataToInvestor(result[0][0])
   }
 
-  public async updateTitle(newTitle: string, videoId: string): Promise<void> {
-    await this.connection.raw(`
-      UPDATE ${this.videoTableName} 
-      SET title = '${newTitle}'
-      WHERE id = '${videoId}';
-    `)
-  }
-
-  public async updateDescription(newDescription: string, videoId: string): Promise<void> {
-    await this.connection.raw(`
-      UPDATE ${this.videoTableName} 
-      SET description = '${newDescription}'
-      WHERE id = '${videoId}';
-    `)
-  }
-
-  public async deleteVideo(videoId: string): Promise<void> {
-    await this.connection.raw(`
-      DELETE 
-      FROM ${this.videoTableName} 
-      WHERE id = '${videoId}';
-    `)
-  }
-
-  public async getAllVideos(limit: number, offset: number): Promise<VideoWithUser[]> {
+  public async getInvestorById(id: string): Promise<Investor | undefined> {
     const result = await this.connection.raw(`
-      SELECT videos.*, users.name userName, users.picture userPicture
-      FROM ${this.videoTableName} 
-      JOIN users ON users.id = videos.userId
-      LIMIT ${limit} OFFSET ${offset};
+      SELECT * 
+      FROM ${this.investorTableName}
+      WHERE id = '${id}';
     `)
 
-    return result[0] && result[0].map((video: any) => {
-      return this.mapDBDataToVideoWithUser(video)
-    })
-  }
-
-  public async getVideoDetails(videoId: string): Promise<VideoWithUser | undefined> {
-    const result = await this.connection.raw(`
-      SELECT videos.*, users.name userName, users.picture userPicture 
-      FROM ${this.videoTableName}
-      JOIN users ON users.id = videos.userId
-      WHERE videos.id = '${videoId}';
-    `)
-
-    return result[0][0] && this.mapDBDataToVideoWithUser(result[0][0])
+    return result[0][0] && this.mapDBDataToInvestor(result[0][0])
   }
 }

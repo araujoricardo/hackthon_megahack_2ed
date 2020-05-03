@@ -6,7 +6,7 @@ export class Investor {
     private password: string,
     private picture?: string,
     private location?: string,
-    private tags?: string[], // Fazer um ENUM?
+    private tags?: string[],
     private portfolio?: string[],
     private likedCompanies?: string[]
   ) { }
