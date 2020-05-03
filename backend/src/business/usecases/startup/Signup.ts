@@ -1,8 +1,8 @@
 import { v4 } from "uuid"
-import { Startup } from "../../entities/StartupX"
+import { Startup } from "../../entities/Startup"
 import { StartupGateway } from "../../gateways/StartupGateway"
-import { BcryptGateway } from "../../gateways/BcryptGatewayX"
-import { JWTAuthGateway } from "../../gateways/JwtAuthGatewayX"
+import { BcryptGateway } from "../../gateways/BcryptGateway"
+import { JWTAuthGateway } from "../../gateways/JwtAuthGateway"
 import { ConflictError } from "../../errors/ConflictError"
 import { BadRequestError } from "../../errors/BadRequestError"
 

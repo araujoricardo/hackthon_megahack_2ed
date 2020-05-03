@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { Bcrypt } from "../../../services/BcryptX";
-import { JWTAuth } from "../../../services/JwtAuthX"
+import { Bcrypt } from "../../../services/Bcrypt";
+import { JWTAuth } from "../../../services/JwtAuth"
 import { FavoriteStartupUC } from "../../../business/usecases/investor/FavoriteStartup";
 import { FavoriteDatabase } from "../../../data/FavoriteDatabase";
 import { StartupDatabase } from "../../../data/StartupDatabase";

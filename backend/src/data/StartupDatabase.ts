@@ -1,6 +1,6 @@
 import { StartupGateway } from "../business/gateways/StartupGateway";
 import { BaseDatabase } from "./BaseDatabase";
-import { Startup } from "../business/entities/StartupX";
+import { Startup } from "../business/entities/Startup";
 
 
 export class StartupDatabase extends BaseDatabase implements StartupGateway {

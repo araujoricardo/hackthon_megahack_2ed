@@ -1,5 +1,5 @@
 import { BaseDatabase } from "./BaseDatabase";
-import { StartupResume } from "../business/entities/StartupX";
+import { StartupResume } from "../business/entities/Startup";
 import { FavoriteGateway } from "../business/gateways/FavoriteGateway";
 
 

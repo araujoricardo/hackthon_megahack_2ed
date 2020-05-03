@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
 import { StartupDatabase } from "../../../data/StartupDatabase";
 import { SignupStartupUC } from "../../../business/usecases/startup/Signup";
-import { JWTAuth } from "../../../services/JwtAuthX"
-import { Bcrypt } from "../../../services/BcryptX"
+import { JWTAuth } from "../../../services/JwtAuth"
+import { Bcrypt } from "../../../services/Bcrypt"
 
 export const signupStartupEndpoint = async (req: Request, res: Response) => {
   try {
