@@ -30,7 +30,7 @@ export const SearchWrapper = styled.div`
     justify-content: space-between;
     justify-self: center;
     align-self: center;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: white;
 `
 
