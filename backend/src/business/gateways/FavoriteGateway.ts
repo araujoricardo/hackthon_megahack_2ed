@@ -1,4 +1,4 @@
-import { StartupResume } from "../entities/StartupX";
+import { StartupResume } from "../entities/Startup";
 
 export interface FavoriteGateway {
   FavoriteStartup(investorId: string, startupId: string): Promise<void>

@@ -1,9 +1,9 @@
 import { FavoriteGateway } from "../../gateways/FavoriteGateway";
-import { JWTAuthGateway } from "../../gateways/JwtAuthGatewayX";
+import { JWTAuthGateway } from "../../gateways/JwtAuthGateway";
 import { StartupGateway } from "../../gateways/StartupGateway";
 import { NotFoundError } from "../../errors/NotFoundError";
 import { UnauthorizedError } from "../../errors/UnauthorizedError";
-import { InvestorGateway } from "../../gateways/InvestorGatewayX";
+import { InvestorGateway } from "../../gateways/InvestorGateway";
 import { BadRequestError } from "../../errors/BadRequestError";
 
 export class FavoriteStartupUC {

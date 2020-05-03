@@ -1,4 +1,4 @@
-import { Investor } from "../entities/InvestorX"
+import { Investor } from "../entities/Investor"
 
 export interface InvestorGateway {
   createInvestor(investor: Investor): Promise<void>

@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { Bcrypt } from "../../../services/BcryptX";
-import { JWTAuth } from "../../../services/JwtAuthX"
+import { Bcrypt } from "../../../services/Bcrypt";
+import { JWTAuth } from "../../../services/JwtAuth"
 import { SignupInvestorUC } from "../../../business/usecases/investor/Signup";
 import { InvestorDatabase } from "../../../data/InvestorDatabase";
 

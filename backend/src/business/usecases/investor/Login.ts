@@ -1,8 +1,8 @@
-import { BcryptGateway } from "../../gateways/BcryptGatewayX"
-import { JWTAuthGateway } from "../../gateways/JwtAuthGatewayX"
+import { BcryptGateway } from "../../gateways/BcryptGateway"
+import { JWTAuthGateway } from "../../gateways/JwtAuthGateway"
 import { NotFoundError } from "../../errors/NotFoundError"
 import { UnauthorizedError } from "../../errors/UnauthorizedError"
-import { InvestorGateway } from "../../gateways/InvestorGatewayX"
+import { InvestorGateway } from "../../gateways/InvestorGateway"
 
 
 export class LoginInvestorUC {

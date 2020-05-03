@@ -1,4 +1,4 @@
-import { Startup } from "../entities/StartupX"
+import { Startup } from "../entities/Startup"
 
 export interface StartupGateway {
   createStartup(startup: Startup): Promise<void>
