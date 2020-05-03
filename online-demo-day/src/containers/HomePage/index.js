@@ -5,14 +5,15 @@ import { routes } from "../Router";
 import {HomePageWrapper, ButtonTop, SignUpButton, ContentText,
         LogoWrapper, TopBottonWrapper, Logo, ContentWrapper, SignUpWrapper
         } from "./style";
-import logoImg from "../../images/logo.png"
+import logoImg from "../../images/logo.png";
+import Header from "../Header"
 
 
 class HomePage extends React.Component{
 
 
     render(){
-        const {goToLoginPage, goToSignUpPage, goToAboutPage, goToErrorPage, goToContactPage} = this.props
+        const {goToSignUpPage} = this.props
 
         return(
             <HomePageWrapper>
@@ -21,10 +22,7 @@ class HomePage extends React.Component{
                 </LogoWrapper>
 
                 <TopBottonWrapper>
-                    <ButtonTop color="primary" onClick={goToLoginPage}>LOGIN</ButtonTop>
-                    <ButtonTop color="primary" onClick={goToAboutPage}>SOBRE NÓS</ButtonTop>
-                    <ButtonTop color="primary" onClick={goToErrorPage}>PLANOS</ButtonTop>
-                    <ButtonTop color="primary" onClick={goToContactPage}>CONTATO</ButtonTop>
+                    <Header/>
                 </TopBottonWrapper>
 
                 <ContentWrapper>
@@ -41,11 +39,7 @@ class HomePage extends React.Component{
 
 const mapDispatchToProps = dispatch =>{
     return{
-        goToLoginPage: () => dispatch(push(routes.login)),
         goToSignUpPage: () => dispatch(push(routes.signuppage)),
-        goToAboutPage:() => dispatch(push(routes.about)),
-        goToErrorPage: () => dispatch(push(routes.errorpage)),
-        goToContactPage: () => dispatch(push(routes.contactpage))
     }
 }
 

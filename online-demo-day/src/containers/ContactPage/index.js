@@ -5,11 +5,12 @@ import { goBack, push } from "connected-react-router";
 import { ContactPageWrapper, LogoWrapper,TopBottonWrapper, ContentWrapper, ContentText,
         Logo, ButtonTop  } from "./style";
 import logoImg from "../../images/logo.png"
+import Header from "../Header"
 
 class ContactPage extends React.Component{
 
     render(){
-        const {goBack, goToLoginPage, goToHomePage, goToErrorPage, goToAboutPage}=this.props
+        const {goBack , goToHomePage}=this.props
         return(
             <ContactPageWrapper>
                 <LogoWrapper>
@@ -17,10 +18,7 @@ class ContactPage extends React.Component{
                 </LogoWrapper>
 
                 <TopBottonWrapper>
-                    <ButtonTop color="primary" onClick={goToLoginPage}>LOGIN</ButtonTop>
-                    <ButtonTop color="primary" onClick={goToAboutPage}>SOBRE NÓS</ButtonTop>
-                    <ButtonTop color="primary" onClick={goToErrorPage}>PLANOS</ButtonTop>
-                    <ButtonTop color="primary">CONTATO</ButtonTop>
+                    <Header/>
                 </TopBottonWrapper>
             
                 <ContentWrapper>
@@ -39,10 +37,6 @@ const mapDispatchToProps = dispatch =>{
     return{
         goBack: () => dispatch(goBack()),
         goToHomePage: () => dispatch(push(routes.root)),
-        goToLoginPage: () => dispatch(push(routes.login)),
-        goToAboutPage:() => dispatch(push(routes.about)),
-        goToErrorPage: () => dispatch(push(routes.errorpage)),
-        goToContactPage: () => dispatch(push(routes.contactpage))
     }
 }
 

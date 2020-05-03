@@ -19,6 +19,8 @@ class ErrorPage extends React.Component{
                 </LogoWrapper>
 
                 <TopBottonWrapper>
+                    {/* //estou fazendo em ordem alfabética, parei aqui */}
+                    
                     <ButtonTop color="primary" onClick={goToLoginPage}>LOGIN</ButtonTop>
                     <ButtonTop color="primary" onClick={goToAboutPage}>SOBRE NÓS</ButtonTop>
                     <ButtonTop color="primary">PLANOS</ButtonTop>

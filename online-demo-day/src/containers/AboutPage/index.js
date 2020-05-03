@@ -5,12 +5,13 @@ import logoImg from "../../images/logo.png"
 import { push } from "connected-react-router";
 import {connect} from "react-redux";
 import {routes} from "../Router";
+import Header from "../Header";
 
 
 class AboutPage extends React.Component{
     
     render(){
-        const{goToLoginPage, goToHomePage, goToErrorPage, goToContactPage}=this.props
+        const{goToHomePage}=this.props
 
         return(
             <AboutWrapper>
@@ -19,10 +20,7 @@ class AboutPage extends React.Component{
                 </LogoWrapper>
 
                 <TopBottonWrapper>
-                    <ButtonTop color="primary" onClick={goToLoginPage}>LOGIN</ButtonTop>
-                    <ButtonTop color="primary">SOBRE NÓS</ButtonTop>
-                    <ButtonTop color="primary" onClick={goToErrorPage}>PLANOS</ButtonTop>
-                    <ButtonTop color="primary" onClick={goToContactPage}>CONTATO</ButtonTop>
+                    <Header/>
                 </TopBottonWrapper>
 
                 <ContentWrapper>
@@ -38,10 +36,7 @@ class AboutPage extends React.Component{
 
 const mapDispatchToProps = dispatch =>{
     return{
-        goToLoginPage: () => dispatch(push(routes.login)),
         goToHomePage: () => dispatch(push(routes.root)),
-        goToErrorPage: () => dispatch(push(routes.errorpage)),
-        goToContactPage: () => dispatch(push(routes.contactpage))
     }
 }
 
