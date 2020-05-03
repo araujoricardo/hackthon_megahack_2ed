@@ -7,6 +7,7 @@ export const ProfilePageWrapper = styled.div`
     display:grid;
     grid-template-rows: 12% 1fr;
     grid-template-columns: 20% 1fr 30%;
+    font-family: Roboto;
 `
 
 export const ProfileSideBar = styled.div`
@@ -36,11 +37,11 @@ export const PropertyWrapper = styled.div`
 export const LogoWrapper = styled.div`
     display:flex;
     align-items:center;
-    margin-left: 60px;
+    justify-content: center;
     grid-column: 1;
 `
 
 export const Logo = styled.img`
-    height: 30px;
+    height: 80%;
     cursor: pointer;
 `
