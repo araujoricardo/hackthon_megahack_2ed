@@ -1,0 +1,9 @@
+{
+  "short_name": "Move",
+  "name": "Move: demo day online",
+  "icons": {
+    "src": "logo.png",
+    "sizes": "189x189",
+    "type": "image/png"
+  }
+}

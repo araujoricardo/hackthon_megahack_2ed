@@ -7,7 +7,7 @@ export const ContentWrapper = styled.div`
 export const TitleAboutUsEntreprenour = styled(Typography)`
     text-align: center;
     &&{
-        margin-top: 10px;
+        margin-top: 30px;
     }
     
 `
@@ -15,7 +15,14 @@ export const TitleAboutUsEntreprenour = styled(Typography)`
 export const ContentAboutUsEntreprenour = styled(Typography)`
     text-align: justify;
     &&{
-        margin: 10px;
+        margin: 30px;
     }
     
+`
+
+export const Image = styled.img`
+    display: block;
+    margin: auto;
+    max-width: 400px;
+    max-height: 400px;
 `
