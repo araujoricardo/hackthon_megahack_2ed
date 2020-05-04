@@ -1,10 +1,12 @@
 import styled from 'styled-components';
-import Typography from '@material-ui/core/Typography'
+import Typography from '@material-ui/core/Typography';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
 export const ContentWrapper = styled.div`
 `
 
-export const TitleAboutUsEntreprenour = styled(Typography)`
+export const TitleScheduleEntreprenour = styled(Typography)`
     text-align: center;
     &&{
         margin-top: 10px;
@@ -12,10 +14,8 @@ export const TitleAboutUsEntreprenour = styled(Typography)`
     
 `
 
-export const ContentAboutUsEntreprenour = styled(Typography)`
-    text-align: justify;
+export const ScheduleEntreprenour = styled(Calendar)`
     &&{
-        margin: 10px;
+        margin: 40px auto;
     }
-    
 `
