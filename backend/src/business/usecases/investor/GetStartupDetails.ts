@@ -35,13 +35,17 @@ export class GetStartupDetailsUC {
 
       const startupDetails = await this.startupdb.GetStartupDetails(investorId, input.startupId)
 
+      if (!startupDetails) {
+        throw new NotFoundError("Startup not found")
+      }
+
       return {
         startupDetails
       }
     } catch (err) {
       throw {
         code: err.statusCode || 400,
-        message: err.message || ""
+        message: err.message
       }
     }
   }
@@ -53,5 +57,5 @@ export interface GetStartupDetailsUCInput {
 }
 
 export interface GetStartupDetailsUCOutput {
-  startupDetails: Startup | undefined
+  startupDetails: Startup
 }

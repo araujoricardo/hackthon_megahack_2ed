@@ -23,6 +23,6 @@ app.post("/signup/investor", signupInvestorEndpoint)
 app.post("/login/investor", loginInvestorEndpoint)
 app.post("/favorite", favoriteStartupEndpoint)
 app.get("/feed", getFeedEndpoint)
-app.get("/details", getStartupDetailsEndpoint)
+app.post("/details", getStartupDetailsEndpoint)
 
 export default app;
