@@ -6,6 +6,7 @@ import { ContactPageWrapper, LogoWrapper,TopBottonWrapper, ContentWrapper, Conte
         Logo} from "./style";
 import logoImg from "../../images/logo.png"
 import Header from "../Header"
+import OurContact from '../../components/OurContact'
 
 class ContactPage extends React.Component{
 
@@ -22,7 +23,7 @@ class ContactPage extends React.Component{
                 </TopBottonWrapper>
             
                 <ContentWrapper>
-                    <ContentText variant="p">Informações de contato aqui!</ContentText>
+                    <OurContact></OurContact>
                 </ContentWrapper>
             
             </ContactPageWrapper>

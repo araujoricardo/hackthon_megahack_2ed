@@ -32,10 +32,9 @@ export const TopBottonWrapper = styled.div`
 `
 
 export const ContentWrapper = styled.div`
-    grid-row: 4;
-    grid-column:2;
-    text-align:right;
-    margin-right: 100px;
+    grid-row: 2/5;
+    grid-column:1/3;
+    text-align:center;
 `
 
 export const ContentText = styled(Typography)`
