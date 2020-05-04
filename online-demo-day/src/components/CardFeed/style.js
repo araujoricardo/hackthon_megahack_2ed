@@ -1,7 +1,6 @@
-import styled from "styled-components";
-import FavoriteIcon from '@material-ui/icons/FavoriteBorder';
-import ShareIcon from '@material-ui/icons/Share';
-
+import styled from "styled-components"
+import FavoriteIcon from '@material-ui/icons/FavoriteBorder'
+import ShareIcon from '@material-ui/icons/Share'
 
 export const CardFeedWrapper = styled.div`
     height: 250px;
