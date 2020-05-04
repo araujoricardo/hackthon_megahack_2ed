@@ -1,23 +1,25 @@
 import React from 'react'
-import {RankingWrapper, InfoWrapper, SetorWrapper, EmpresaWrapper, VotosWrapper, PlaceWrapper, 
-        PlaceText, SetorText, EmpresaText, VotosText} from './style'
+import {
+    RankingWrapper, InfoWrapper, SetorWrapper, EmpresaWrapper, VotosWrapper, PlaceWrapper,
+    PlaceText, SetorText, EmpresaText, VotosText
+} from './style'
 
 function CardRanking(props) {
-    return(
+    return (
         <RankingWrapper>
             <InfoWrapper>
                 <SetorWrapper>
-                    <SetorText>Setor: </SetorText>
+                    <SetorText>Setor: {props.sector}</SetorText>
                 </SetorWrapper>
                 <EmpresaWrapper>
-                    <EmpresaText>Empresa: </EmpresaText>
+                    <EmpresaText>Empresa: {props.name}</EmpresaText>
                 </EmpresaWrapper>
                 <VotosWrapper>
-                    <VotosText>Votos: </VotosText>
+                    <VotosText>Votos: {props.voteNumber}</VotosText>
                 </VotosWrapper>
             </InfoWrapper>
             <PlaceWrapper>
-                <PlaceText>1°</PlaceText>
+                <PlaceText>{props.ranking}°</PlaceText>
             </PlaceWrapper>
         </RankingWrapper>
     )

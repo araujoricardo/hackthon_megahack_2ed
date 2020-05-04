@@ -12,10 +12,11 @@ import CardProfileSideBar from "../../components/CardProfileSideBar"
 import logoImg from "../../images/logo.png"
 import CardRanking from "../../components/CardRanking"
 import SearchIcon from '@material-ui/icons/Search'
+import { ranking } from "./startups"
 
 class FeedPage extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
   }
 
   componentDidMount() {
@@ -23,7 +24,7 @@ class FeedPage extends React.Component {
   }
 
   render() {
-    const { goToFeedPage, goToEventPage, goToProfileEntrepreneurPage, feed } = this.props;
+    const { goToFeedPage, goToEventPage, goToProfileEntrepreneurPage, feed } = this.props
     return (
       <FeedPageWrapper>
         <LogoWrapper>
@@ -51,9 +52,9 @@ class FeedPage extends React.Component {
             <CardFeed
               title={startup.name}
               description={startup.summarizedProposal}
-              video="https://www.youtube.com/embed/HY6T2zcsSsQ"
-              logoImg="https://uploads-ssl.webflow.com/5e790d30d198385b09366d8f/5e7a1e52fcda283f91287398_logoLabenu100.png"
-              votes=""
+              video={startup.video}
+              logoImg={startup.picture}
+              votes={startup.summarizedProposal.length}
               knowmore={goToProfileEntrepreneurPage}
             />
           ))}
@@ -63,7 +64,14 @@ class FeedPage extends React.Component {
           <TitleRanking variant="h3" color="white">Ranking</TitleRanking>
         </TitleRankingWrapper>
         <RankingWrapper>
-          <CardRanking />
+          {ranking.map(startup => (
+            <CardRanking
+              sector={startup.sector}
+              name={startup.name}
+              voteNumber={startup.voteNumber}
+              ranking={startup.ranking}
+            />
+          ))}
         </RankingWrapper>
       </FeedPageWrapper>
     )
@@ -80,7 +88,7 @@ const mapDispatchToProps = dispatch => {
     getFeed: () => dispatch(getFeed()),
     goToFeedPage: () => dispatch(push(routes.feedpage)),
     goToEventPage: () => dispatch(push(routes.livestream)),
-    goToProfileEntrepreneurPage: () => dispatch(push(routes.profileentrepreneurpage)),
+    goToProfileEntrepreneurPage: () => dispatch(push(routes.profileentrepreneurpage))
   }
 }
 
