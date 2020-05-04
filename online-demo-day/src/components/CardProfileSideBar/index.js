@@ -19,8 +19,8 @@ class CardProfileSideBar extends React.Component{
         return(
             <ProfileSideBarWrapper>        
                 <PictureWrapper>
-                    <ProfilePicture src={require("../../images/image.png")}/>
-                    <TextName>Bill Gates</TextName>
+                    <ProfilePicture>IS</ProfilePicture>
+                    <TextName>Icaro Souza</TextName>
                 </PictureWrapper>
                 <LinksWrapper>
                     <ButtonWrapper onClick={this.props.notification}>
