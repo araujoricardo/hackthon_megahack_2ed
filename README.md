@@ -73,7 +73,7 @@ Apresentacao -
 
 Pitch - https://youtu.be/Fx6QeuSnYYU
 
-Site Hospedado - Não tem
+Site Hospedado - http://pegn.s3-website-us-east-1.amazonaws.com/
 
 Trello - [https://trello.com/b/Ldo0iXyx/pegn](https://trello.com/b/Ldo0iXyx/pegn)
 
