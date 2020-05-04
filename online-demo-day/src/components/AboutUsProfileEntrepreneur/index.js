@@ -1,7 +1,7 @@
 import React from 'react'
 import {ContentWrapper, TitleAboutUsEntreprenour, ContentAboutUsEntreprenour} from './style'
 
-function ProfileEntrepreneur(props) {
+function AboutUsProfileEntrepreneur(props) {
     return(
         <ContentWrapper>
             <TitleAboutUsEntreprenour variant="h3">Sobre nós</TitleAboutUsEntreprenour>
@@ -10,4 +10,4 @@ function ProfileEntrepreneur(props) {
     )
 };
 
-export default ProfileEntrepreneur;
+export default AboutUsProfileEntrepreneur;

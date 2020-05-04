@@ -16,10 +16,10 @@ export const TextWrapper = styled.div`
 `
 
 export const PropertyText = styled(Button)`
-&&{
-    color: white;
-    display: flex;
-    justify-content: flex-start;
-    font-size: 1.5em;
-}
+    &&{
+        color: white;
+        display: flex;
+        justify-content: flex-start;
+        font-size: 1.5em;
+    }
 `

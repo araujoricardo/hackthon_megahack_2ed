@@ -5,16 +5,16 @@ export default function CardEntrepreneurProperty(props){
     return(
         <PropertyWrapper>
             <TextWrapper>
-                <PropertyText color="primary" isActive={props.isActive}>Sobre nós</PropertyText>
+                <PropertyText color="primary" onClick={props.onClickAboutUs}>Sobre nós</PropertyText>
             </TextWrapper>
             <TextWrapper>
-                <PropertyText color="primary">Equipe</PropertyText>
+                <PropertyText color="primary" onClick={props.onClickTeam}>Equipe</PropertyText>
             </TextWrapper>
             <TextWrapper>
-                <PropertyText color="primary">Projeto</PropertyText>
+                <PropertyText color="primary" onClick={props.onClickProject}>Projeto</PropertyText>
             </TextWrapper>
             <TextWrapper>
-                <PropertyText color="primary">Agenda</PropertyText>
+                <PropertyText color="primary" onClick={props.onClickSchedule}>Agenda</PropertyText>
             </TextWrapper>
         </PropertyWrapper>
     )

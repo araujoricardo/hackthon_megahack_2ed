@@ -6,16 +6,44 @@ import {ProfilePageWrapper, ProfileSideBar, ContentWrapper, PropertyWrapper, Log
         ButtonSearchWrapper, SearchWrapper} from "./style";
 import CardProfileSideBar from "../../components/CardProfileSideBar"
 import CardEntrepreneurProperty from "../../components/CardEntrepreneurProperty"
-import ProfileEntrepreneur from '../../components/ProfileEntrepreneur'
+import AboutUsProfileEntrepreneur from '../../components/AboutUsProfileEntrepreneur'
+import ScheduleProfileEntrepreneur from '../../components/ScheduleProfileEntrepreneur'
 import logoImg from "../../images/logo.png"
 import SearchIcon from '@material-ui/icons/Search';
 
 
 class ProfileEntrepreneurPage extends React.Component{
 
+    state = {
+        aboutUs: true,
+        schedule: false,
+    }
+
+    onClickAboutUs = () => {
+        this.setState({
+            aboutUs: true,
+            schedule: false
+        })
+    }
+
+    onClickSchedule = () => {
+        this.setState({
+            aboutUs: false,
+            schedule: true
+        })
+    }
+
     render(){
 
         const {goToFeedPage, goToEventPage} = this.props;
+        let showAboutUs;
+        let showSchedule;
+
+        if(this.state.aboutUs){
+            showAboutUs = <AboutUsProfileEntrepreneur></AboutUsProfileEntrepreneur>
+        }else if (this.state.schedule){
+            showSchedule = <ScheduleProfileEntrepreneur>Agenda</ScheduleProfileEntrepreneur>
+        }
 
         return(
             <ProfilePageWrapper>
@@ -35,11 +63,14 @@ class ProfileEntrepreneurPage extends React.Component{
                 </SearchWrapper>
 
                 <ContentWrapper>
-                    <ProfileEntrepreneur></ProfileEntrepreneur>
+                    {showAboutUs}
+                    {showSchedule}
                 </ContentWrapper>            
 
                 <PropertyWrapper>
-                    <CardEntrepreneurProperty/>
+                    <CardEntrepreneurProperty
+                        onClickAboutUs={this.onClickAboutUs}
+                        onClickSchedule={this.onClickSchedule}/>
                 </PropertyWrapper>
 
             </ProfilePageWrapper>
