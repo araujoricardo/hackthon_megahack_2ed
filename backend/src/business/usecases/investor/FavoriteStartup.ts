@@ -24,13 +24,13 @@ export class FavoriteStartupUC {
     const investor = this.investordb.getInvestorById(investorId)
 
     if(!investor) {
-      throw new UnauthorizedError("Ivestor not exist")
+      throw new UnauthorizedError("Investor doesn't exist")
     }
 
     const startup = await this.startupdb.getStartupById(input.startupId)
 
     if(!startup) {
-      throw new NotFoundError('Startup not exist')
+      throw new NotFoundError("Startup doesn't exist")
     }
 
     await this.favoritedb.FavoriteStartup(investorId, input.startupId)

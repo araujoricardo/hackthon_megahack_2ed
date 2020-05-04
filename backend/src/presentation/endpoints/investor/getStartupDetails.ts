@@ -10,7 +10,7 @@ export const getStartupDetailsEndpoint = async (req: Request, res: Response) => 
     const uc = new GetStartupDetailsUC(new StartupDatabase(), new InvestorDatabase(), new JWTAuth())
 
     const result = await uc.execute({
-      token: req.body.token,
+      token: req.headers.token as string,
       startupId: req.body.startupId
     })
 

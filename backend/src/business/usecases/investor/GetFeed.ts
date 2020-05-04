@@ -34,7 +34,7 @@ export class GetFeedUC {
     } catch (err) {
       throw {
         code: err.statusCode || 400,
-        message: err.message || ""
+        message: err.message
       }
     }
   }
