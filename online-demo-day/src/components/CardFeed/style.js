@@ -30,7 +30,7 @@ export const TitleWrapper = styled.div`
     grid-row:1;
     display:flex;
     align-items:flex-end;
-    margin-left: 5px;
+    margin-left: 20px;
 `
 
 
@@ -49,7 +49,7 @@ export const DescriptionWrapper = styled.div`
     grid-row: 2;
     margin-right: 20px;
     text-align: justify;
-    margin-left: 5px;
+    margin-left: 20px;
 `
 
 export const TagWrapper = styled.div`
@@ -58,6 +58,7 @@ export const TagWrapper = styled.div`
     display:flex;
     align-items: center;
     justify-content: center;
+    margin-left: 20px;
 `
 
 export const VoteWrapper = styled.div`
@@ -79,12 +80,13 @@ export const InfoBotton = styled.div`
 
 export const Logo = styled.img`
     height: 50px;
-
 `
 
-export const Thumbnail = styled.img`
-    height: 120px;
-    margin-left: 5px;
+export const Thumbnail = styled.iframe`
+    height: 100%;
+    width: 100%;
+    margin-left: 10px;
+    margin-top: 10px;
 `
 
 export const LikeButton = styled(FavoriteIcon)`
