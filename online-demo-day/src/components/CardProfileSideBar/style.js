@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Button from "@material-ui/core/Button";
 import Typography from '@material-ui/core/Typography'
+import Avatar from '@material-ui/core/Avatar';
 
 export const ProfileSideBarWrapper = styled.div`
     display:grid;
@@ -25,10 +26,14 @@ export const PictureWrapper = styled.div`
     padding-top: 10px;
 `
 
-export const ProfilePicture = styled.img`
-    height:124px;
-    width:124px;
-    border-radius: 50%;
+export const ProfilePicture = styled(Avatar)`
+    &&{
+        height:124px;
+        width:124px;
+        background-color: #12A2F4;
+        font-size: 1.5em;
+    }
+    
 `
 
 export const LinksWrapper = styled.div`

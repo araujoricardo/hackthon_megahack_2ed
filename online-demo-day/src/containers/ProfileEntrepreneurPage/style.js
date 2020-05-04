@@ -24,8 +24,7 @@ export const ContentWrapper = styled.div`
     height:100%;
     width:100%;
     overflow-y:scroll;
-    display:grid;
-    justify-content: center;
+    display: grid;
     border-radius: 25px 25px 0 0;
 `
 
