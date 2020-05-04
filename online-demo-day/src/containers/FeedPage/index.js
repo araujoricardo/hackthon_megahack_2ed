@@ -32,8 +32,7 @@ class FeedPage extends React.Component {
 
         <ProfileSideBar>
           <CardProfileSideBar
-            events={goToEventPage}
-            profile={goToProfileEntrepreneurPage} />
+            events={goToEventPage} />
         </ProfileSideBar>
 
 
@@ -52,9 +51,10 @@ class FeedPage extends React.Component {
             <CardFeed
               title={startup.name}
               description={startup.summarizedProposal}
-              thumbnail="https://s3.amazonaws.com/kp-blog/wp-content/uploads/2018/07/03165544/Thumbnail-Youtube-o-que-é-8-dicas-de-como-fazer-e-principais-ferramentas.jpg"
+              video="https://www.youtube.com/embed/HY6T2zcsSsQ"
               logoImg="https://uploads-ssl.webflow.com/5e790d30d198385b09366d8f/5e7a1e52fcda283f91287398_logoLabenu100.png"
-              votes="9"
+              votes=""
+              knowmore={goToProfileEntrepreneurPage}
             />
           ))}
         </ContentWrapper>
@@ -68,8 +68,6 @@ class FeedPage extends React.Component {
       </FeedPageWrapper>
     )
   }
-
-
 
 }
 

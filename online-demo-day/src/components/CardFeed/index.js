@@ -14,7 +14,7 @@ export default function CardFeed(props){
             <TitleWrapper><b>{props.title}</b></TitleWrapper>
             <DescriptionWrapper>{props.description}</DescriptionWrapper>
             <VideoWrapper>
-                <Thumbnail src={props.thumbnail}/>
+                <Thumbnail src={props.video} frameborder="0" allow="accelerometer; fullscreen; autoplay; encrypted-media; gyroscope; picture-in-picture"/>
             </VideoWrapper>
             <TagWrapper>
                 <Typography color="textSecondary"><i>{props.tags}</i></Typography>
