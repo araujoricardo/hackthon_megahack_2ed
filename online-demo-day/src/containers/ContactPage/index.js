@@ -8,6 +8,7 @@ import logoImg from "../../images/logo.png";
 import Header from "../Header";
 import OurContact from '../../components/OurContact';
 
+
 class ContactPage extends React.Component{
 
     render(){

@@ -14,7 +14,6 @@ export const login = (email, password) => async (dispatch) => {
     dispatch(push(routes.feedpage))
 
   } catch (error) {
-    console.log(error)
-    window.alert("Erro no Login!")
+    window.alert("Usuário ou senha incorretos")
   }
 }

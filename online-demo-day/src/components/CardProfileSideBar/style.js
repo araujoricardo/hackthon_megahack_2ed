@@ -84,7 +84,7 @@ export const TextButton = styled(Typography)`
 export const TextName = styled(Typography)`
     &&{
         color: white;
-        font-size: 1.3em;
+        font-size: 1em;
     }
 `
 
