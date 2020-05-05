@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const baseUrl = "http://localhost:5000"
+const baseUrl = "https://9xtejx17u0.execute-api.us-east-1.amazonaws.com/v1"
 
 export const getFeed = () => async (dispatch) => {
   try {
@@ -8,7 +8,7 @@ export const getFeed = () => async (dispatch) => {
 
     const axiosConfig = {
       headers: {
-        auth: token,
+        Authorization: token,
       },
     };
 
