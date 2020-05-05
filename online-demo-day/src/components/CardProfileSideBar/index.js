@@ -19,8 +19,8 @@ class CardProfileSideBar extends React.Component{
         return(
             <ProfileSideBarWrapper>        
                 <PictureWrapper>
-                    <ProfilePicture>IS</ProfilePicture>
-                    <TextName>Icaro Souza</TextName>
+                    <ProfilePicture>TS</ProfilePicture>
+                    <TextName>Tales Souza</TextName>
                 </PictureWrapper>
                 <LinksWrapper>
                     <ButtonWrapper onClick={this.props.notification}>

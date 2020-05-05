@@ -4,8 +4,9 @@ import {routes} from "../Router";
 import { push } from "connected-react-router";
 import { ContactPageWrapper, LogoWrapper,TopBottonWrapper, ContentWrapper, ContentText,
         Logo} from "./style";
-import logoImg from "../../images/logo.png"
-import Header from "../Header"
+import logoImg from "../../images/logo.png";
+import Header from "../Header";
+import OurContact from '../../components/OurContact';
 
 class ContactPage extends React.Component{
 
@@ -22,7 +23,7 @@ class ContactPage extends React.Component{
                 </TopBottonWrapper>
             
                 <ContentWrapper>
-                    <ContentText variant="p">Informações de contato aqui!</ContentText>
+                    <OurContact/>
                 </ContentWrapper>
             
             </ContactPageWrapper>

@@ -11,8 +11,9 @@ export default function CardFeed(props){
             </LiveStreamContentWrapper>
 
             <LiveStreamDescriptionWrapper>
-                <Typography variant="h3">Descrição</Typography>
-                <Typography variant="body1">{props.description}</Typography>
+                <Typography variant="h4">Apresentação de ideias para o mercado tecnológico.</Typography>
+                <br/>
+                <Typography variant="body1">Neste video iremos apresentar todo o conteúdo e ideia de um projeto para o ramo da tecnologia, com o intuito de buscar inovação neste mercado.</Typography>
             </LiveStreamDescriptionWrapper>
             
         </LiveStreamWrapper>
