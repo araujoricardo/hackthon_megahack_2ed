@@ -74,7 +74,11 @@ Lambda - Utilizada para executar o backend da aplicação.
 API Gateway - Utilizada para gerenciar e redirecionar as requisições para a lambda.
 S3 - Utilizada para hospedar o frontend da nossa aplicação.
 
-## Links úteis
+## Links e informações úteis
+
+**Usuário para teste**
+Login: fernanda@hartmann.com
+Senha: fernanda
 
 Apresentacao - https://drive.google.com/file/d/1S6D87BA-l5k4de0NVxO6rok4O8SlzncF/view?usp=sharing
 
