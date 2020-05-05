@@ -65,11 +65,18 @@ Empresas, empreendedores e investidores
 
 **BACK-END**
 
- - NodeJS
+Para o deploy da nossa aplicação escolhemos a infraestrutura da AWS, devido a sua agilidade nos serviços, baixo custo de operação, por possuir serviços flexiveis e ser altamente segura. tudo isso favorecendo a escalabilidade e a qualidade do nosso produto.
+
+**Serviços Utilizados:**
+
+EC2 - Utilizamos para armazenar o banco de dados relacional.
+Lambda - Utilizada para executar o backend da aplicação.
+API Gateway - Utilizada para gerenciar e redirecionar as requisições para a lambda.
+S3 - Utilizada para hospedar o frontend da nossa aplicação.
 
 ## Links úteis
 
-Apresentacao - 
+Apresentacao - https://drive.google.com/file/d/1S6D87BA-l5k4de0NVxO6rok4O8SlzncF/view?usp=sharing
 
 Pitch - https://youtu.be/Fx6QeuSnYYU
 
