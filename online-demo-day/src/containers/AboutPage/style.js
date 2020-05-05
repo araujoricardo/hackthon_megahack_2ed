@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import Typography from '@material-ui/core/Typography'
+import Paper from '@material-ui/core/Paper'
 
 
-export const AboutWrapper = styled.div`
+export const AboutWrapper = styled.div` 
     position: absolute;
     height: 100%;
     width:100%;
@@ -49,3 +50,22 @@ export const ContentText = styled(Typography)`
 }   
 `
 
+export const LinksWrapper = styled.div`
+    grid-column:1;
+    grid-row:2/4;
+    display:grid;
+    align-items:center;
+    justify-content: center;
+`
+
+
+export const PaperWrapper = styled(Paper)`
+    display:grid;
+`
+
+export const LinksText = styled.a`
+    color: #28a4ef;
+    font-size: 20px;
+    text-decoration:none;
+    margin-left: 20px;
+`
