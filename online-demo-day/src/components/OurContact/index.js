@@ -45,7 +45,7 @@ export default function OurContact(props){
                 </RicardoContactWrapper>
                 <LorenzoContactWrapper>
                     <PersonPicture src={lorenzoImage}></PersonPicture>
-                    <PersonName variant="h4"><b>Lorenzo</b></PersonName>
+                    <PersonName variant="h4"><b>Lorenzo Nathaniel No</b></PersonName>
                     <SocialMediaWrapper>
                         <a href="https://github.com/lorenzono" target="_blank"><GitHubButton><GitHubIcon></GitHubIcon></GitHubButton></a>
                         <a href="https://www.linkedin.com/in/lorenzo-nathaniel-no-0392b6129/" target="_blank"><LinkedInButton><LinkedInIcon></LinkedInIcon></LinkedInButton></a>
@@ -53,7 +53,7 @@ export default function OurContact(props){
                 </LorenzoContactWrapper>
                 <IgorContactWrapper>
                     <PersonPicture src={igorImage}></PersonPicture>
-                    <PersonName variant="h4"><b>Igor</b></PersonName>
+                    <PersonName variant="h4"><b>Igor Alves</b></PersonName>
                     <SocialMediaWrapper>
                         <a href="https://github.com/igoralvesantos" target="_blank"><GitHubButton><GitHubIcon></GitHubIcon></GitHubButton></a>
                         <a href="https://www.linkedin.com/in/igor-alves-santos/" target="_blank"><LinkedInButton><LinkedInIcon></LinkedInIcon></LinkedInButton></a>
