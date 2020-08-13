@@ -82,11 +82,11 @@ Login: fernanda@hartmann.com
 Senha: fernanda
 ```
 
-Apresentacao - https://drive.google.com/file/d/1S6D87BA-l5k4de0NVxO6rok4O8SlzncF/view?usp=sharing
+[Apresentação](https://drive.google.com/file/d/1S6D87BA-l5k4de0NVxO6rok4O8SlzncF/view?usp=sharing)
 
-Pitch - https://youtu.be/Fx6QeuSnYYU
+[Pitch](https://youtu.be/Fx6QeuSnYYU)
 
-Site Hospedado - http://pegn.s3-website-us-east-1.amazonaws.com/
+[Site Hospedado](http://pegn.s3-website-us-east-1.amazonaws.com)
 
 Trello - [https://trello.com/b/Ldo0iXyx/pegn](https://trello.com/b/Ldo0iXyx/pegn)
 
