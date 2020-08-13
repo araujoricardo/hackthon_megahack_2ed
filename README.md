@@ -88,6 +88,6 @@ Senha: fernanda
 
 [Site Hospedado](http://pegn.s3-website-us-east-1.amazonaws.com)
 
-Trello - [https://trello.com/b/Ldo0iXyx/pegn](https://trello.com/b/Ldo0iXyx/pegn)
+[Trello](https://trello.com/b/Ldo0iXyx/pegn)
 
-InvisioApp - [https://diogogaspar462897.invisionapp.com/board/Mockup------Layout-ck9og55lh01wy17vj240vste5?v=Byt5WyH2piftRaSXbfQA5A%3D%3D&linkshare=urlcopied](https://diogogaspar462897.invisionapp.com/board/Mockup------Layout-ck9og55lh01wy17vj240vste5?v=Byt5WyH2piftRaSXbfQA5A%3D%3D&linkshare=urlcopied)
+[InvisioApp](https://diogogaspar462897.invisionapp.com/board/Mockup------Layout-ck9og55lh01wy17vj240vste5?v=Byt5WyH2piftRaSXbfQA5A%3D%3D&linkshare=urlcopied)
