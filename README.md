@@ -78,7 +78,7 @@ S3 - Utilizada para hospedar o frontend da nossa aplicação.
 
 
 ```
-***Usuário para teste***
+**Usuário para teste**
 Login: fernanda@hartmann.com
 Senha: fernanda
 ```
