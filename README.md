@@ -84,8 +84,8 @@ Login: fernanda@hartmann.com
 Senha: fernanda
 ```
 
-[Apresentação](https://drive.google.com/file/d/1S6D87BA-l5k4de0NVxO6rok4O8SlzncF/view?usp=sharing)
-[Pitch](https://youtu.be/Fx6QeuSnYYU)
-[Site Hospedado](http://pegn.s3-website-us-east-1.amazonaws.com)
-[Trello](https://trello.com/b/Ldo0iXyx/pegn)
+[Apresentação](https://drive.google.com/file/d/1S6D87BA-l5k4de0NVxO6rok4O8SlzncF/view?usp=sharing)</br>
+[Pitch](https://youtu.be/Fx6QeuSnYYU)</br>
+[Site Hospedado](http://pegn.s3-website-us-east-1.amazonaws.com)</br>
+[Trello](https://trello.com/b/Ldo0iXyx/pegn)</br>
 [InvisioApp](https://diogogaspar462897.invisionapp.com/board/Mockup------Layout-ck9og55lh01wy17vj240vste5?v=Byt5WyH2piftRaSXbfQA5A%3D%3D&linkshare=urlcopied)
