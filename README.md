@@ -1,9 +1,9 @@
 # Sejam bem vindos ao projeto Move
 
 ## Evento
-2ª Edição do MegaHack
-Desafio: Pequenas Empresas & Grandes Negócios e Revista Época.
-Data: Abr/2020
+2ª Edição do MegaHack</br>
+Desafio: Pequenas Empresas & Grandes Negócios e Revista Época.</br>
+Data: Abr/2020</br>
 
 ## Desafio
 A atual pandemia do coronavírus, nos provou o quanto precisamos estar habituados a mudanças, certamente teremos um novo normal depois que tudo isso passar. E dentro desse contexto, o mundo de eventos, certamente passará por grande transformação. Com o isolamento social o formato de atividades online teve um aumento absurdo, e se popularizou entre as empresas de modo inimaginável.
