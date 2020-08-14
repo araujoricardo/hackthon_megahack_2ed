@@ -1,7 +1,9 @@
 # Sejam bem vindos ao projeto Move
 
-## Objetivo
-Realizar o desafio da PEGN e Revista Época na 2ª Edição do Mega Hack
+## Evento
+2ª Edição do MegaHack
+Desafio: Pequenas Empresas & Grandes Negócios e Revista Época.
+Data: Abr/2020
 
 ## Desafio
 A atual pandemia do coronavírus, nos provou o quanto precisamos estar habituados a mudanças, certamente teremos um novo normal depois que tudo isso passar. E dentro desse contexto, o mundo de eventos, certamente passará por grande transformação. Com o isolamento social o formato de atividades online teve um aumento absurdo, e se popularizou entre as empresas de modo inimaginável.
@@ -75,17 +77,21 @@ API Gateway - Utilizada para gerenciar e redirecionar as requisições para a la
 S3 - Utilizada para hospedar o frontend da nossa aplicação.
 
 ## Links e informações úteis
-
-
 ```
 Usuário para teste:
 
 Login: fernanda@hartmann.com
 Senha: fernanda
 ```
-
 [Apresentação](https://drive.google.com/file/d/1S6D87BA-l5k4de0NVxO6rok4O8SlzncF/view?usp=sharing)</br>
 [Pitch](https://youtu.be/Fx6QeuSnYYU)</br>
 [Site Hospedado](http://pegn.s3-website-us-east-1.amazonaws.com)</br>
 [Trello](https://trello.com/b/Ldo0iXyx/pegn)</br>
 [InvisioApp](https://diogogaspar462897.invisionapp.com/board/Mockup------Layout-ck9og55lh01wy17vj240vste5?v=Byt5WyH2piftRaSXbfQA5A%3D%3D&linkshare=urlcopied)
+
+## Desenvolvido por:
+* [Diogo Gaspar](https://github.com/gaspar-d)</br>
+* [Icaro de Souza](https://github.com/icarohadouken)</br>
+* [Igor Alves](https://github.com/igoralvesantos)</br>
+* [Lorenzo No](https://github.com/future4code/Lorenzo-No)</br>
+* [Ricardo Araujo](https://github.com/araujoricardo)</br>
